@@ -50,13 +50,14 @@ import (
   "go.temporal.io/sdk/worker"
   "go.temporal.land/integrations/{% $mod %}"
   "go.temporal.land/specifications/bucket"
+  "go.temporal.land/toolkit/integration"
 )
 
 func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
   
   // Create the Temporal worker, as stated in the Temporal documentation.
@@ -111,7 +112,7 @@ func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
 
   // Define the workflow options, as stated in the Temporal documentation.
@@ -121,7 +122,7 @@ func main() {
 
   // Execute the workflow previously registered in the worker.
   _, _ = c.ExecuteWorkflow(ctx, opts, "custom(bucket).Write", bucket.InputWrite{
-    Context: event.Context{},
+    Context: &event.Context{},
     Path:    "path/to/file.json",
     Options: bucket.WriteOptions{
       ContentEncoding: "utf-8",

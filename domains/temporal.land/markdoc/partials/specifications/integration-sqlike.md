@@ -38,13 +38,14 @@ import (
   "go.temporal.io/sdk/worker"
   "go.temporal.land/integrations/{% $mod %}"
   "go.temporal.land/specifications/sqlike"
+  "go.temporal.land/toolkit/integration"
 )
 
 func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
   
   // Create the Temporal worker, as stated in the Temporal documentation.
@@ -99,7 +100,7 @@ func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
 
   // Define the workflow options, as stated in the Temporal documentation.
@@ -109,7 +110,7 @@ func main() {
 
   // Execute the workflow previously registered in the worker.
   _, _ = c.ExecuteWorkflow(ctx, opts, "custom(sqlike).Queries", sqlike.InputQueries{
-    Context: event.Context{},
+    Context: &event.Context{},
     Queries: []string{
       `INSERT INTO users (id, first_name, last_name) VALUES
         ('a78c3d1b-e57a-4578-a322-1cdc7219441f', 'Elliot', 'Anderson');`,

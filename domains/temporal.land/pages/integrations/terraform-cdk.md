@@ -50,13 +50,14 @@ import (
   "go.temporal.io/sdk/client"
   "go.temporal.io/sdk/worker"
   "go.temporal.land/integrations/terraform"
+  "go.temporal.land/toolkit/integration"
 )
 
 func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
   
   // Create the Temporal worker, as stated in the Temporal documentation.
@@ -115,7 +116,7 @@ func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
 
   // Create a new Terraform CDK project.
@@ -141,7 +142,7 @@ func main() {
 
   // Execute the workflow previously registered in the worker.
   _, _ = c.ExecuteWorkflow(ctx, opts, "custom.DeployFromCDK", terraform.InputDeployFromCDK{
-    Context:        event.Context{},
+    Context:        &event.Context{},
     Provisions:     provisions,
     ManifestRoot:   manifestRoot,
     ManifestStacks: manifestStacks,

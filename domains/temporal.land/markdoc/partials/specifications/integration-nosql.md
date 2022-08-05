@@ -83,13 +83,14 @@ import (
   "go.temporal.io/sdk/worker"
   "go.temporal.land/integrations/{% $mod %}"
   "go.temporal.land/specifications/nosql"
+  "go.temporal.land/toolkit/integration"
 )
 
 func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
   
   // Create the Temporal worker, as stated in the Temporal documentation.
@@ -145,7 +146,7 @@ func main() {
   ctx := context.Background()
 
   // Create the Temporal client, as stated in the Temporal documentation.
-  c, _ := client.NewClient(client.Options{})
+  c, _ := client.Dial(client.Options{})
   defer c.Close()
 
   // Define the workflow options, as stated in the Temporal documentation.
@@ -157,7 +158,7 @@ func main() {
   // in nosql.Config when registering the specification is required on every
   // NoSQL-related workflows.
   _, _ = c.ExecuteWorkflow(ctx, opts, "custom(nosql).Put", nosql.Input{
-    Context:  event.Context{},
+    Context:  &event.Context{},
     Document: map[string]any{
       "{% $config.Key %}": "y943yr7843yr873",
       "key": "value",
