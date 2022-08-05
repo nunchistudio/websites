@@ -21,9 +21,8 @@ function Home(props) {
           <EuiSpacer size="xl" />
           <EuiText size="m">
             <p>
-              Nunchi is an organization designing, building, and maintaining open source
-              softwares to help engineering teams deliver consistent, reliable, and
-              scalable Cloud Platforms.
+              Nunchi is an organization helping engineering teams deliver reliable,
+              durable, and scalable Cloud Platforms and Data Planes.
             </p>
           </EuiText>
         </EuiFlexItem>
@@ -135,7 +134,7 @@ function Home(props) {
               <p>
                 When working with companies, I sometimes have the opportunity to
                 deliver something generic enough that it can be leveraged by others.
-                When this happen, I do my best to make it open source. Nunchi is
+                When this happens, I do my best to make it open source. Nunchi is
                 the organization I publish my professional open source work to.
               </p>
             </EuiText>

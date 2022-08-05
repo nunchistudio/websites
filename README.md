@@ -48,7 +48,7 @@ would like, but should be nice to have to improve community contributions:
 
 - **Better CI/CD.** All markdown files are copied/pasted using a local script
   from other repositories whereas this should be more automated (see `Makefile`).
-  For example, when a new version of a product is released, automaticall create
+  For example, when a new version of a product is released, automatically create
   a pull request including all markdown files and assets such as images.
 - **Improve SEO.** Meta tags should be better across layouts and pages.
 - **One place for common images.** Currently, some images are copied/pasted
