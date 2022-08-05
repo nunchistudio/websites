@@ -5,8 +5,8 @@ import { HomeLayout } from '@nunchistudio/base';
 const Layout = ({ children }) => {
   return (
     <HomeLayout name="Nunchi" withLogo={true}
-      logoLight="https://www.nunchi.studio/assets/nunchi/logo.svg"
-      logoDark="https://www.nunchi.studio/assets/nunchi/logo-white.svg"
+      logoLight="/images/nunchi-light.svg"
+      logoDark="/images/nunchi-dark.svg"
     >
       <EuiSpacer size="xl" />
       {children}
