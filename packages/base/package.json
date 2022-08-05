@@ -1,0 +1,32 @@
+{
+  "name": "@nunchistudio/base",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.js",
+    "./next.config.js": "./src/next.config.js",
+    "./markdoc": "./src/markdoc"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@elastic/eui": "~62.0.1",
+    "@elastic/datemath": "~5.0.3",
+    "@emotion/react": "~11.9.3",
+    "@markdoc/markdoc": "~0.1.4",
+    "@markdoc/next.js": "~0.1.6",
+    "copy-webpack-plugin": "~11.0.0",
+    "glob": "~8.0.3",
+    "moment": "~2.29.3",
+    "next": "~12.2.3",
+    "nextjs-redirect": "~6.0.1",
+    "prop-types": "~15.8.1",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "react-github-btn": "~1.3.0",
+    "webpack": "~5.74.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "websites",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "npm@8.12.1",
+  "workspaces": [
+    "domains/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel --no-cache",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "build": "turbo run build",
+    "start": "turbo run start"
+  },
+  "devDependencies": {
+    "turbo": "~1.4.2"
+  }
+}

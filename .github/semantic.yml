@@ -1,0 +1,19 @@
+titleAndCommits: true
+allowMergeCommits: true
+allowRevertCommits: true
+
+types:
+  - "docs"
+  - "feat"
+  - "fix"
+  - "refactor"
+  - "revert"
+  - "sponsors"
+  - "version"
+
+scopes:
+  - "next"
+  - "eui"
+  - "markdoc"
+  - "turborepo"
+  - "backport"
