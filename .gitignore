@@ -106,6 +106,8 @@ typings/
 .fusebox/
 .dynamodb/
 
+.vercel
+
 dist/
 build/
 
@@ -116,3 +118,10 @@ build/
 
 .env
 .env.*
+
+
+############################################
+## Elastic UI
+############################################
+
+**/public/themes/***
