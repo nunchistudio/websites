@@ -104,41 +104,44 @@ const DocsLayout = (props) => {
             },
           ]}
         />
-        <EuiSpacer size="l" />
-        <EuiSpacer size="l" />
-        <EuiPageTemplate pageSideBar={<EuiSideNav mobileTitle="Navigation" isOpenOnMobile={true} items={props.sideNav} />}>
-          <EuiFlexGroup>
-            <EuiFlexItem grow={8}>
-              {props.before &&
-                <>
-                  <EuiSpacer size="xl" />
-                  {props.before}
-                  <EuiSpacer size="s" />
-                </>
-              }
-              <EuiText>
-                {props.children}
-              </EuiText>
-              {props.markdoc && props.markdoc.frontmatter && props.markdoc.frontmatter.location &&
-                <>
-                  <EuiSpacer size="xl" />
-                  <EuiCallOut iconType="reporter" title="Is something missing?">
-                    <EuiText size="s">
-                      If you notice something we've missed or could be improved on,
-                      please <EuiLink external href={link}>follow this link</EuiLink> and
-                      submit a pull request to the repository. Once we merge it, the changes
-                      will be reflected on the website the next time it is deployed.
-                      Thank you for your contributions!
-                    </EuiText>
-                  </EuiCallOut>
-                </>
-              }
-              <EuiSpacer size='xl' />
-            </EuiFlexItem>
-            <EuiFlexItem grow={2}>
-              <TableOfContents toc={toc} />
-            </EuiFlexItem>
-          </EuiFlexGroup>
+        <EuiPageTemplate>
+          <EuiPageTemplate.Sidebar sticky={true}>
+            <EuiSideNav mobileTitle="Navigation" isOpenOnMobile={true} items={props.sideNav} />
+          </EuiPageTemplate.Sidebar>
+          <EuiPageTemplate.Section grow={true}>
+            <EuiFlexGroup>
+              <EuiFlexItem grow={8}>
+                {props.before &&
+                  <>
+                    <EuiSpacer size="xl" />
+                    {props.before}
+                    <EuiSpacer size="s" />
+                  </>
+                }
+                <EuiText>
+                  {props.children}
+                </EuiText>
+                {props.markdoc && props.markdoc.frontmatter && props.markdoc.frontmatter.location &&
+                  <>
+                    <EuiSpacer size="xl" />
+                    <EuiCallOut iconType="reporter" title="Is something missing?">
+                      <EuiText size="s">
+                        If you notice something we've missed or could be improved on,
+                        please <EuiLink external href={link}>follow this link</EuiLink> and
+                        submit a pull request to the repository. Once we merge it, the changes
+                        will be reflected on the website the next time it is deployed.
+                        Thank you for your contributions!
+                      </EuiText>
+                    </EuiCallOut>
+                  </>
+                }
+                <EuiSpacer size='xl' />
+              </EuiFlexItem>
+              <EuiFlexItem grow={2}>
+                <TableOfContents toc={toc} />
+              </EuiFlexItem>
+            </EuiFlexGroup>
+          </EuiPageTemplate.Section>
         </EuiPageTemplate>
 
         <div style={{ marginLeft: '27px', position: 'fixed', bottom: '27px' }} className="eui-hideFor--xs eui-hideFor--s">
@@ -148,13 +151,6 @@ const DocsLayout = (props) => {
             <EuiImage src={`/images/nunchi-${colorMode}.svg`} height={20} width={20} alt="Nunchi" />
           </EuiLink>
         </div>
-        <style jsx global>
-          {`
-            .euiPageSideBar--sticky {
-              top: 48px;
-            }
-          `}
-        </style>
       </div>
     </>
   );
