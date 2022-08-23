@@ -12,15 +12,18 @@ There is a primary Working Group, where all the main decisions are made regardin
 the Temporal Land project. Where an area of the project needs more time or is of
 interest to a subset of the Working Group membership, then a sub-Working Group
 will be formed for that specific area. The current Sub-Working Groups are:
-- `tsql`
+- `temporal-aas`: CLI and production-ready infrastructure for managing Temporal
+  as a Service.
+- `temporal-sqlops`: CLI to manage operations and migrations on top of Temporal 
+  Land SQL integrations.
 
 ## Mission
 
 The TLC's purpose is to discuss, give guidance to, and enable collaboration on
-current development efforts for Temporal Land and related projects such as `tsql`.
-The TLC will also include the discussion of shared community goals for Temporal
-Land. Additionally, the TLC will produce supporting materials and best practices
-for end-users.
+current development efforts for Temporal Land and related projects. The TLC will
+also include the discussion of shared community goals for Temporal Land.
+Additionally, the TLC will produce supporting materials and best practices for
+end-users.
 
 The mission of the TLC is:
 - To collaborate on areas related to developing, managing, and operating Temporal
@@ -35,7 +38,7 @@ The mission of the TLC is:
 ### Areas in scope
 
 The TLC focuses on the following end-user related topics:
-- Developing, managing, and operating Temporal Land.
+- Developing, managing, and operating Temporal and Temporal Land.
 - Design, definition, and development of new specifications and integrations.
 - Temporal Land delivery and release management.
 - Temporal Land management and operations.
@@ -48,7 +51,6 @@ capability gaps in the current ecosystem are defined.
 ### Areas out of scope
 
 Anything not explicitly considered in the scope above. Example include:
-- Deployment, management, and operations of Temporal.
 - Development related to Temporal and Temporal SDKs.
 
 ## Governance
