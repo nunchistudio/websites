@@ -86,11 +86,13 @@ func main() {
   // Execute the workflow previously registered in the worker.
   _, _ = c.ExecuteWorkflow(ctx, opts, "custom(analytics).Identify", analytics.InputIdentify{
     Context: &event.Context{},
-    UserID:  "a78c3d1b-e57a-4578-a322-1cdc7219441f",
-    Traits:  map[string]any{
-      "first_name": "Elliot",
-      "last_name":  "Anderson",
-      "email":      "elliot.anderson@evil.corp",
+    Identify: analytics.Identify{
+      UserID:  "a78c3d1b-e57a-4578-a322-1cdc7219441f",
+      Traits:  map[string]any{
+        "first_name": "Elliot",
+        "last_name":  "Anderson",
+        "email":      "elliot.anderson@evil.corp",
+      },
     },
   })
 }
