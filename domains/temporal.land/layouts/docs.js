@@ -71,6 +71,10 @@ const Layout = ({ path, markdoc, children }) => {
           name: 'Lifecycle policies',
           href: '/toolkit/lifecycle',
         },
+        {
+          name: 'Errors, SLOs and SLAs',
+          href: '/toolkit/errorstack',
+        },
       ],
     },
     {
