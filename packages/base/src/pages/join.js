@@ -32,50 +32,55 @@ const Join = (props) => {
 
       <EuiFlexGrid columns={3} gutterSize="xl">
         <EuiFlexItem>
-          <EuiCard title="" icon={<EuiIcon size="xxl" type={`/icons/github-${colorMode}.svg`} />}
+          <EuiCard title="Repository" icon={<EuiIcon size="xxl" type={`/icons/github-${colorMode}.svg`} />}
+            paddingSize="xl"
             footer={
               <EuiButton size="s" color="primary" href={`https://github.com/nunchistudio/${props.repository}`}>
-                Star repository on GitHub
+                Give us a star
               </EuiButton>
             }
           />
         </EuiFlexItem>
 
         <EuiFlexItem>
-          <EuiCard title="" icon={<EuiIcon size="xxl" type={`/icons/sponsors-${colorMode}.png`} />}
+          <EuiCard title="Sponsors" icon={<EuiIcon size="xxl" type={`/icons/sponsors-${colorMode}.png`} />}
+            paddingSize="xl"
             footer={
               <EuiButton size="s" color="accent" href="https://github.com/sponsors/nunchistudio">
-                Become a GitHub sponsor
+                Support us
               </EuiButton>
             }
           />
         </EuiFlexItem>
 
         <EuiFlexItem>
-          <EuiCard title="" icon={<EuiIcon size="xxl" type={`/icons/slack-${colorMode}.svg`} />}
+          <EuiCard title="Slack" icon={<EuiIcon size="xxl" type={`/icons/slack-${colorMode}.svg`} />}
+            paddingSize="xl"
             footer={
               <EuiButton size="s" color="success" href="/slack">
-                Join us on Slack
+                Join our community
               </EuiButton>
             }
           />
         </EuiFlexItem>
 
         <EuiFlexItem>
-          <EuiCard title="" icon={<EuiIcon size="xxl" type={`/icons/twitter-${colorMode}.svg`} />}
+          <EuiCard title="Twitter" icon={<EuiIcon size="xxl" type={`/icons/twitter-${colorMode}.svg`} />}
+            paddingSize="xl"
             footer={
               <EuiButton size="s" color="primary" href="https://twitter.com/nunchistudio">
-                Follow us on Twitter
+                Follow us
               </EuiButton>
             }
           />
         </EuiFlexItem>
 
         <EuiFlexItem>
-          <EuiCard title="" icon={<EuiIcon size="xxl" type={`/icons/linkedin-${colorMode}.svg`} />}
+          <EuiCard title="LinkedIn" icon={<EuiIcon size="xxl" type={`/icons/linkedin-${colorMode}.svg`} />}
+            paddingSize="xl"
             footer={
               <EuiButton size="s" color="primary" href="https://www.linkedin.com/company/nunchistudio/">
-                Follow us on LinkedIn
+                Follow us
               </EuiButton>
             }
           />

@@ -121,7 +121,7 @@ function Home(props) {
       <EuiFlexGrid columns={3} gutterSize="xl">
         <EuiFlexItem grow={7}>
           <EuiCard title="Loïc Saint-Roch" titleElement="h3" titleSize="xs"
-            icon={<EuiAvatar name="Loïc Saint-Roch" size="xl" imageUrl="/avatars/loicsaintroch.jpeg" />}
+            icon={<EuiIcon title="Loïc Saint-Roch" size="xxl" type="/avatars/loicsaintroch.png" />}
             layout="horizontal" display="transparent"
           >
             <EuiText size="xs">

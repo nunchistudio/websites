@@ -27,22 +27,6 @@ function Integration(props) {
     icon = <EuiIcon size="xxl" type={`/icons/${props.integration.id}-${colorMode}.png`} />;
   }
 
-  if (props.integration.isPinned) {
-    return (
-      <EuiFlexItem>
-        <EuiCard icon={icon}
-          title={props.integration.name}
-          titleSize="xs"
-          href={`/integrations/${props.integration.id}`}
-          betaBadgeProps={{
-            label: <EuiIcon size="m" type="starFilled" color="primary" />,
-            title: "Most used",
-          }}
-        />
-      </EuiFlexItem>
-    );
-  }
-
   return (
     <EuiFlexItem>
       <EuiCard icon={icon}
