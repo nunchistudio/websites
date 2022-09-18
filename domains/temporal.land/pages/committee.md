@@ -12,10 +12,12 @@ There is a primary Working Group, where all the main decisions are made regardin
 the Temporal Land project. Where an area of the project needs more time or is of
 interest to a subset of the Working Group membership, then a sub-Working Group
 will be formed for that specific area. The current Sub-Working Groups are:
-- `temporal-aas`: CLI and production-ready infrastructure for managing Temporal
-  as a Service.
-- `temporal-sqlops`: CLI to manage operations and migrations on top of Temporal 
-  Land SQL integrations.
+- [`tctl-plugin-generate`](https://github.com/nunchistudio/tctl-plugin-generate):
+  Plugin for the Temporal CLI `tctl`, adding commands for generating production-ready
+  projects, workers, and clients.
+- [`tctl-plugin-sql`](https://github.com/nunchistudio/tctl-plugin-sql): Plugin for
+  the Temporal CLI `tctl`, adding commands for orchestrating operations on top of
+  Temporal Land SQL integrations.
 
 ## Mission
 
