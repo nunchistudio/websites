@@ -71,8 +71,8 @@ repository will be the authoritative archive for the primary Working Group
 membership list, code, documentation, and decisions made. Each Sub-Working Group
 can have its own repository when applicable.
 
-The appropriate Slack channels will be used as a place to call for and publish
-group decisions, and to hold discussions in general.
+The appropriate channels on Discord will be used as a place to call for and
+publish group decisions, and to hold discussions in general.
 
 The GitHub Sponsors Email Updates will be used as a place to publish group
 decisions as well.
@@ -98,14 +98,14 @@ supporters for their desired outcome.
 
 When the group comes to a decision in a meeting, the decision is tentative. Any
 group participant may object to a decision reached at a meeting within 7 days of
-publication of the decision on the GitHub Issue and/or announcement on the Slack
-channel. That decision must then be confirmed on the GitHub Issue and on the
-Slack channel. This is a Call for Agreement.
+publication of the decision on the GitHub Issue and/or announcement on the channel
+on Discord. That decision must then be confirmed on the GitHub Issue and on the
+channel on Discord. This is a Call for Agreement.
 
 The Call for Agreement, when a decision is required, will be posted as a GitHub
 Issue or Pull Request, and must be announced both on the GitHub Sponsors Email
-Updates and the Slack channel. It is an instrument to reach a time-bounded lazy
-consensus approval and requires a voting period of no less than 7 days to be
+Updates and the channel on Discord. It is an instrument to reach a time-bounded
+lazy consensus approval and requires a voting period of no less than 7 days to be
 defined (including a specific date and time in UTC).
 
 Each Call for Agreement will be considered independently, except for elections

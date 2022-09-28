@@ -32,6 +32,17 @@ const Join = (props) => {
 
       <EuiFlexGrid columns={3} gutterSize="xl">
         <EuiFlexItem>
+          <EuiCard title="Discord" icon={<EuiIcon size="xxl" type={`/icons/discord-${colorMode}.svg`} />}
+            paddingSize="xl"
+            footer={
+              <EuiButton size="s" color="success" href="/discord">
+                Join our community
+              </EuiButton>
+            }
+          />
+        </EuiFlexItem>
+
+        <EuiFlexItem>
           <EuiCard title="Repository" icon={<EuiIcon size="xxl" type={`/icons/github-${colorMode}.svg`} />}
             paddingSize="xl"
             footer={
@@ -48,17 +59,6 @@ const Join = (props) => {
             footer={
               <EuiButton size="s" color="accent" href="https://github.com/sponsors/nunchistudio">
                 Support us
-              </EuiButton>
-            }
-          />
-        </EuiFlexItem>
-
-        <EuiFlexItem>
-          <EuiCard title="Slack" icon={<EuiIcon size="xxl" type={`/icons/slack-${colorMode}.svg`} />}
-            paddingSize="xl"
-            footer={
-              <EuiButton size="s" color="success" href="/slack">
-                Join our community
               </EuiButton>
             }
           />

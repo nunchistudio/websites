@@ -25,7 +25,12 @@ module.exports = withMarkdoc({ mode: 'static' })({
     return [
       {
         source: '/slack',
-        destination: 'https://join.slack.com/t/nunchistudio/shared_invite/zt-uxsr7ff7-KpmDn7QJMGIPUUZj7HNKZg',
+        destination: 'https://discord.gg/aG3DFNS5vQ',
+        permanent: true,
+      },
+      {
+        source: '/discord',
+        destination: 'https://discord.gg/aG3DFNS5vQ',
         permanent: true,
       },
     ]
