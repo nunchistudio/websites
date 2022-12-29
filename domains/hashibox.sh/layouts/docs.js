@@ -18,10 +18,6 @@ const Layout = ({ path, markdoc, children }) => {
           name: 'Installation',
           href: '/installation',
         },
-        {
-          name: 'Vault initialization',
-          href: '/vault-init',
-        },
       ],
     },
     {
