@@ -12,13 +12,13 @@
     "src"
   ],
   "dependencies": {
-    "@elastic/eui": "~67.0.0",
+    "@elastic/eui": "~74.1.0",
     "@elastic/datemath": "~5.0.3",
-    "@emotion/react": "~11.10.4",
-    "@markdoc/markdoc": "~0.1.7",
-    "@markdoc/next.js": "~0.1.6",
+    "@emotion/react": "~11.10.5",
+    "@markdoc/markdoc": "~0.2.2",
+    "@markdoc/next.js": "~0.2.1",
     "copy-webpack-plugin": "~11.0.0",
-    "glob": "~8.0.3",
+    "glob": "~8.1.0",
     "moment": "~2.29.4",
     "next": "~12.3.0",
     "nextjs-redirect": "~6.0.1",
@@ -26,7 +26,7 @@
     "react": "~17.0.2",
     "react-dom": "~17.0.2",
     "react-github-btn": "~1.4.0",
-    "webpack": "~5.74.0"
+    "webpack": "~5.75.0"
   },
   "devDependencies": {}
 }

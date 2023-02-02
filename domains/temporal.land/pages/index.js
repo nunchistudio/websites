@@ -66,8 +66,8 @@ function Home(props) {
 
   return (
     <>
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
           <EuiTitle size="l">
             <h1>Invincible integrations</h1>
           </EuiTitle>
@@ -96,8 +96,8 @@ function Home(props) {
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFlexItem>
-        <EuiFlexItem grow={3}></EuiFlexItem>
-      </EuiFlexGrid>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
 
       <EuiSpacer size="xl" />
       <EuiSpacer size="xl" />
@@ -255,8 +255,8 @@ function Home(props) {
 
       <EuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={4}>
           <EuiText>
             <p>
               Once registered in a Temporal worker, developers can consume
@@ -281,12 +281,12 @@ function Home(props) {
           </EuiText>
         </EuiFlexItem>
 
-        <EuiFlexItem grow={2} style={{ backgroundColor: backgroundCode}}>
+        <EuiFlexItem grow={6} style={{ backgroundColor: backgroundCode}}>
           <EuiCodeBlock language="go" transparentBackground={true}>
             {gist}
           </EuiCodeBlock>
         </EuiFlexItem>
-      </EuiFlexGrid>
+      </EuiFlexGroup>
 
       <EuiSpacer size="xl" />
       <EuiSpacer size="xl" />

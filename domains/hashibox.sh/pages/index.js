@@ -13,8 +13,8 @@ function Home(props) {
 
   return (
     <>
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
           <EuiTitle size="l">
             <h1>Cloud Platform with HashiCorp</h1>
           </EuiTitle>
@@ -43,10 +43,8 @@ function Home(props) {
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFlexItem>
-        <EuiFlexItem grow={3}>
-
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
 
       <EuiSpacer size="xl" />
       <EuiSpacer size="xl" />
@@ -102,7 +100,7 @@ function Home(props) {
 
       <EuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={3} gutterSize="xl">
+      <EuiFlexGrid columns={1} gutterSize="xl">
         <EuiImage src={`/images/hashibox-${colorMode}.png`} alt="How HashiBox works" />
       </EuiFlexGrid>
     </>

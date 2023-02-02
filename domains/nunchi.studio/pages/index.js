@@ -1,7 +1,7 @@
 import {
-  EuiFlexGrid, EuiFlexItem,
+  EuiFlexGrid, EuiFlexGroup, EuiFlexItem,
   EuiCard, EuiTitle,
-  EuiIcon, EuiBadge, EuiAvatar,
+  EuiIcon, EuiBadge,
   EuiText, EuiButton, EuiButtonEmpty,
   EuiSpacer,
 } from '@elastic/eui';
@@ -13,8 +13,8 @@ function Home(props) {
 
   return (
     <>
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
           <EuiTitle size="l">
             <h1>Helping you deliver Cloud Platforms</h1>
           </EuiTitle>
@@ -26,8 +26,8 @@ function Home(props) {
             </p>
           </EuiText>
         </EuiFlexItem>
-        <EuiFlexItem grow={3}></EuiFlexItem>
-      </EuiFlexGrid>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
 
       <EuiSpacer size="xl" />
       <EuiSpacer size="xl" />
@@ -44,8 +44,8 @@ function Home(props) {
 
       <EuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
           <EuiCard title="Temporal Land" titleElement="h3" titleSize="xs"
             icon={<EuiIcon type="securityAnalyticsApp" size="xl" />}
             layout="horizontal" display="transparent"
@@ -66,14 +66,14 @@ function Home(props) {
             </EuiButton>
           </EuiCard>
         </EuiFlexItem>
-        <EuiFlexItem grow={3}></EuiFlexItem>
-      </EuiFlexGrid>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
 
       <EuiSpacer size="l" />
       <EuiSpacer size="l" />
 
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
           <EuiCard title="HashiBox" titleElement="h3" titleSize="xs"
             icon={<EuiIcon type="savedObjectsApp" size="xl" />}
             layout="horizontal" display="transparent"
@@ -93,15 +93,15 @@ function Home(props) {
             </EuiButton>
           </EuiCard>
         </EuiFlexItem>
-        <EuiFlexItem grow={3}></EuiFlexItem>
-      </EuiFlexGrid>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
 
       <EuiSpacer size="xl" />
       <EuiSpacer size="xl" />
       <EuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
           <EuiTitle size="s">
             <h2>Who are we?</h2>
           </EuiTitle>
@@ -113,13 +113,13 @@ function Home(props) {
             </p>
           </EuiText>
         </EuiFlexItem>
-        <EuiFlexItem grow={3}></EuiFlexItem>
-      </EuiFlexGrid>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
 
       <EuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
           <EuiCard title="Loïc Saint-Roch" titleElement="h3" titleSize="xs"
             icon={<EuiIcon title="Loïc Saint-Roch" size="xxl" type="/avatars/loicsaintroch.png" />}
             layout="horizontal" display="transparent"
@@ -139,7 +139,7 @@ function Home(props) {
               </p>
             </EuiText>
             <EuiSpacer size="m" />
-            <EuiFlexGrid gutterSize="l">
+            <EuiFlexGroup gutterSize="l">
               <EuiFlexItem>
                 <EuiButtonEmpty iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/loicsaintroch">
                   @loicsaintroch
@@ -155,11 +155,11 @@ function Home(props) {
                   /in/loicsaintroch
                 </EuiButtonEmpty>
               </EuiFlexItem>
-            </EuiFlexGrid>
+            </EuiFlexGroup>
           </EuiCard>
         </EuiFlexItem>
-        <EuiFlexItem grow={3}></EuiFlexItem>
-      </EuiFlexGrid>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
     </>
   );
 };
