@@ -2,7 +2,7 @@
   "name": "websites",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "npm@8.19.3",
+  "packageManager": "npm@9.6.4",
   "workspaces": [
     "domains/*",
     "packages/*"
@@ -15,6 +15,6 @@
     "start": "turbo run start"
   },
   "devDependencies": {
-    "turbo": "~1.7.2"
+    "turbo": "~1.9.4"
   }
 }
