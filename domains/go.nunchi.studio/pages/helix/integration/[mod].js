@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 
-import ecosystem from '../../../data/ecosystem.json';
+import ecosystem from '../../../data/helix/ecosystem.json';
 
 export async function getStaticPaths() {
   let paths = [];
