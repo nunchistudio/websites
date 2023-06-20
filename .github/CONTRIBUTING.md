@@ -1,4 +1,4 @@
-# Contributing to Nunchi websites
+# Contributing to `websites`
 
 We are incredibly thankful for the contributions we can receive from the community.
 

@@ -21,9 +21,9 @@ const Join = (props) => {
 
       <EuiText>
         <p>
-          {props.name} is an open source project maintained by the {' '}
+          {props.name} is a product maintained by the {' '}
           <EuiLink external href="https://nunchi.studio">Nunchi</EuiLink> organization
-          and a growing community, with the help of sponsors.
+          with the help of companies sponsoring the development.
         </p>
       </EuiText>
 
@@ -32,33 +32,11 @@ const Join = (props) => {
 
       <EuiFlexGrid columns={3} gutterSize="xl">
         <EuiFlexItem>
-          <EuiCard title="Discord" icon={<EuiIcon size="xxl" type={`/icons/discord-${colorMode}.svg`} />}
-            paddingSize="xl"
-            footer={
-              <EuiButton size="s" color="success" href="/discord">
-                Join our community
-              </EuiButton>
-            }
-          />
-        </EuiFlexItem>
-
-        <EuiFlexItem>
           <EuiCard title="Repository" icon={<EuiIcon size="xxl" type={`/icons/github-${colorMode}.svg`} />}
             paddingSize="xl"
             footer={
               <EuiButton size="s" color="primary" href={`https://github.com/nunchistudio/${props.repository}`}>
                 Give us a star
-              </EuiButton>
-            }
-          />
-        </EuiFlexItem>
-
-        <EuiFlexItem>
-          <EuiCard title="Sponsors" icon={<EuiIcon size="xxl" type={`/icons/sponsors-${colorMode}.png`} />}
-            paddingSize="xl"
-            footer={
-              <EuiButton size="s" color="accent" href="https://github.com/sponsors/nunchistudio">
-                Support us
               </EuiButton>
             }
           />

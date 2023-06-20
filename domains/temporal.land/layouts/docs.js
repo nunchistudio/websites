@@ -78,15 +78,11 @@ const Layout = ({ path, markdoc, children }) => {
       ],
     },
     {
-      name: 'Community',
-      icon: <EuiIcon type="heart" color="accent" />,
+      name: 'Resources',
+      icon: <EuiIcon type="help" color="accent" />,
       items: [
         {
-          name: 'Committee',
-          href: '/committee',
-        },
-        {
-          name: 'Join us',
+          name: 'Community',
           href: '/join',
         },
       ],

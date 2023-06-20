@@ -8,7 +8,6 @@ const GitHub = (props) => {
 
   return (
     <>
-      <GitHubButton data-color-scheme={colorMode} href="https://github.com/sponsors/nunchistudio" data-icon="octicon-heart" data-size="large" aria-label="Sponsor @nunchistudio on GitHub">Sponsor</GitHubButton>
       <GitHubButton data-color-scheme={colorMode} href="https://github.com/nunchistudio" data-size="large" aria-label="Follow @nunchistudio on GitHub">Follow</GitHubButton>
       {props.repository &&
         <GitHubButton data-color-scheme={colorMode} href={`https://github.com/nunchistudio/${props.repository}`} data-icon="octicon-star" data-size="large" data-show-count="true" aria-label={`Star @nunchistudio/${props.repository} on GitHub`}>Star</GitHubButton>

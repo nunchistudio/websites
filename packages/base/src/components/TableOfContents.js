@@ -3,39 +3,32 @@ import React from 'react';
 import { EuiLink } from '@elastic/eui';
 
 const TableOfContents = ({ toc }) => {
-  const items = toc.filter(
-    (item) =>
-      item.id &&
-      (item.level === 2 || item.level === 3) &&
-      item.title !== 'Next steps'
-  );
+  const items = toc.filter((item) => item.id && (item.level === 2 || item.level === 3));
 
   return (
     <nav className="toc" style={{ position: 'sticky', top: '72px'}}>
-      {items.length > 1 ? (
-        <ul className="flex column">
-          {items.map((item) => {
-            const href = `#${item.id}`;
-            const active = typeof window !== 'undefined' && window.location.hash === href;
+      <ul className="flex column">
+        {items.map((item) => {
+          const href = `#${item.id}`;
+          const active = typeof window !== 'undefined' && window.location.hash === href;
 
-            return (
-              <li
-                key={item.title}
-                className={[
-                  active ? 'active' : undefined,
-                  item.level === 3 ? 'padded' : undefined
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-              >
-                <EuiLink href={href}>
-                  {item.title}
-                </EuiLink>
-              </li>
-            );
-          })}
-        </ul>
-      ) : null}
+          return (
+            <li
+              key={item.title}
+              className={[
+                active ? 'active' : undefined,
+                item.level === 3 ? 'padded' : undefined
+              ]
+                .filter(Boolean)
+                .join(' ')}
+            >
+              <EuiLink href={href}>
+                {item.title}
+              </EuiLink>
+            </li>
+          );
+        })}
+      </ul>
       <style jsx>
         {`
           nav {

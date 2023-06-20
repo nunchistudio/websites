@@ -21,21 +21,6 @@ module.exports = withMarkdoc({ mode: 'static' })({
     THEME_CONFIG: JSON.stringify(themeConfig),
   },
 
-  async redirects() {
-    return [
-      {
-        source: '/slack',
-        destination: 'https://discord.gg/aG3DFNS5vQ',
-        permanent: true,
-      },
-      {
-        source: '/discord',
-        destination: 'https://discord.gg/aG3DFNS5vQ',
-        permanent: true,
-      },
-    ]
-  },
-
   webpack(config, { isServer }) {
     if (isServer) {
       config.externals = config.externals.map(eachExternal => {

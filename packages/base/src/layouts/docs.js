@@ -58,10 +58,19 @@ const DocsLayout = (props) => {
     if (section.items) {
       section.items.forEach(item => {
         item.id = htmlIdGenerator()();
-        item.isSelected = props.path.startsWith(item.href)
+        item.isSelected = props.path == item.href;
       })
+    } else {
+      if (props.path == section.href || props.path.startsWith(section.href)) {
+        section.isSelected = true;
+      }
     }
   })
+
+  let homepage = '/';
+  if (props.homepage) {
+    homepage = props.homepage;
+  }
 
   let link = `https://github.com/nunchistudio/${props.repository}`;
   if (props.markdoc.frontmatter.location != null) {
@@ -89,7 +98,7 @@ const DocsLayout = (props) => {
               borders: 'none',
               items: [
                 <EuiText style={{ marginLeft: '15px' }}>
-                  <EuiLink href="/" style={{ color: color }}>
+                  <EuiLink href={homepage} style={{ color: color }}>
                     <strong>{props.name}</strong>
                   </EuiLink>
                 </EuiText>

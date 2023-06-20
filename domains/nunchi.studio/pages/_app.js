@@ -9,10 +9,16 @@ import {
 } from '@nunchistudio/base';
 
 import HomeLayout from '../layouts/home';
+import HelixLayout from '../layouts/helix';
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
   const path = router.asPath;
+
+  let Layout = HomeLayout;
+  if (path.startsWith('/helix')) {
+    Layout = HelixLayout;
+  }
 
   const { markdoc } = pageProps;
 
@@ -22,9 +28,9 @@ const App = ({ Component, pageProps }) => {
       <Theme>
         <Chrome>
           <EuiErrorBoundary>
-            <HomeLayout path={path} markdoc={markdoc}>
+            <Layout path={path} markdoc={markdoc}>
               <Component {...pageProps} />
-            </HomeLayout>
+            </Layout>
           </EuiErrorBoundary>
         </Chrome>
       </Theme>

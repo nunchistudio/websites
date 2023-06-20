@@ -8,4 +8,8 @@ export const globalStyles = css`
     flex-direction: column;
     height: 100%;
   }
+
+  article ul {
+    margin-bottom: 34px;
+  }
 `;

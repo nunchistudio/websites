@@ -1,8 +1,7 @@
 import {
   EuiFlexGrid, EuiFlexGroup, EuiFlexItem,
-  EuiCard, EuiTitle,
-  EuiIcon, EuiBadge,
-  EuiText, EuiButton, EuiButtonEmpty,
+  EuiCard, EuiIcon, EuiTitle,
+  EuiText, EuiButton,
   EuiSpacer,
 } from '@elastic/eui';
 
@@ -16,13 +15,13 @@ function Home(props) {
       <EuiFlexGroup gutterSize="xl">
         <EuiFlexItem grow={6}>
           <EuiTitle size="l">
-            <h1>Helping you deliver Cloud Platforms</h1>
+            <h1>Delivering custom-made Data Planes and Cloud Platforms for the Enterprise</h1>
           </EuiTitle>
           <EuiSpacer size="xl" />
           <EuiText size="m">
             <p>
-              Nunchi is an organization helping engineering teams deliver reliable,
-              durable, and scalable Cloud Platforms and Data Planes.
+              Nunchi is the organization I publish my professional work on to help companies
+              deliver reliable, cloud-native, high-performance Data Planes and Cloud Platforms.
             </p>
           </EuiText>
         </EuiFlexItem>
@@ -36,61 +35,44 @@ function Home(props) {
       <EuiFlexGrid columns={3} gutterSize="xl">
         <EuiFlexItem grow={7}>
           <EuiTitle size="s">
-            <h2>Our solutions</h2>
+            <h2>Products</h2>
           </EuiTitle>
         </EuiFlexItem>
         <EuiFlexItem grow={3}></EuiFlexItem>
       </EuiFlexGrid>
 
-      <EuiSpacer size="xl" />
+      <EuiSpacer size="xxl" />
 
       <EuiFlexGroup gutterSize="xl">
         <EuiFlexItem grow={6}>
-          <EuiCard title="Temporal Land" titleElement="h3" titleSize="xs"
-            icon={<EuiIcon type="securityAnalyticsApp" size="xl" />}
+          <EuiCard paddingSize="none" title="helix" titleElement="h3" titleSize="xs"
+            icon={<EuiIcon type="logsApp" size="xxl" />}
             layout="horizontal" display="transparent"
           >
-            <EuiBadge color="success">Development</EuiBadge>
-            <EuiSpacer size="l" />
             <EuiText>
               <p>
-                Temporal Land is an ecosystem of production-ready workflows and
-                activities for Temporal. This lets developers benefit consistent
-                Integrations as a Service for building reliable and scalable Cloud
-                Platforms and Data Planes.
+                helix provides an opinionated way to build microservices. After years
+                of working with different organizations and various technical stacks,
+                I've decided to put my knowledge and experiences into helix so I can
+                deliver a consistent and high quality of work.
+              </p>
+              <p>
+                Source code is available for anyone who wishes to use it!
               </p>
             </EuiText>
             <EuiSpacer size="l" />
-            <EuiButton color="primary" size="s" href="https://temporal.land" iconType="arrowRight" iconSide="right">
-              Visit website
-            </EuiButton>
-          </EuiCard>
-        </EuiFlexItem>
-        <EuiFlexItem grow={4}></EuiFlexItem>
-      </EuiFlexGroup>
-
-      <EuiSpacer size="l" />
-      <EuiSpacer size="l" />
-
-      <EuiFlexGroup gutterSize="xl">
-        <EuiFlexItem grow={6}>
-          <EuiCard title="HashiBox" titleElement="h3" titleSize="xs"
-            icon={<EuiIcon type="savedObjectsApp" size="xl" />}
-            layout="horizontal" display="transparent"
-          >
-            <EuiBadge color="accent">Infrastructure</EuiBadge>
-            <EuiSpacer size="l" />
-            <EuiText>
-              <p>
-                HashiBox provides a local setup respecting environment parity for
-                simulating a high-available Cloud Platform from end-to-end before
-                going in production.
-              </p>
-            </EuiText>
-            <EuiSpacer size="l" />
-            <EuiButton color="primary" size="s" href="https://hashibox.sh" iconType="arrowRight" iconSide="right">
-              Visit website
-            </EuiButton>
+            <EuiFlexGroup>
+              <EuiFlexItem grow={false}>
+                <EuiButton color="primary" href="/helix/integrations" iconType="layers">
+                  Discover integrations
+                </EuiButton>
+              </EuiFlexItem>
+              <EuiFlexItem grow={false}>
+                <EuiButton color="success" href="/helix" iconType="arrowRight" iconSide="right">
+                  Get started
+                </EuiButton>
+              </EuiFlexItem>
+            </EuiFlexGroup>
           </EuiCard>
         </EuiFlexItem>
         <EuiFlexItem grow={4}></EuiFlexItem>
@@ -100,60 +82,57 @@ function Home(props) {
       <EuiSpacer size="xl" />
       <EuiSpacer size="xl" />
 
-      <EuiFlexGroup gutterSize="xl">
-        <EuiFlexItem grow={6}>
+      <EuiFlexGrid columns={3} gutterSize="xl">
+        <EuiFlexItem grow={7}>
           <EuiTitle size="s">
-            <h2>Who are we?</h2>
+            <h2>Who am I?</h2>
           </EuiTitle>
-          <EuiSpacer size="xl" />
-          <EuiText size="m">
-            <p>
-              As of now, Nunchi is a solo-founded open source organization, also
-              maintained by a growing community and the help of sponsors.
-            </p>
-          </EuiText>
         </EuiFlexItem>
-        <EuiFlexItem grow={4}></EuiFlexItem>
-      </EuiFlexGroup>
+        <EuiFlexItem grow={3}></EuiFlexItem>
+      </EuiFlexGrid>
 
-      <EuiSpacer size="xl" />
+      <EuiSpacer size="xxl" />
 
       <EuiFlexGroup gutterSize="xl">
         <EuiFlexItem grow={6}>
-          <EuiCard title="Loïc Saint-Roch" titleElement="h3" titleSize="xs"
+          <EuiCard paddingSize="none" title="Loïc Saint-Roch" titleElement="h3" titleSize="xs"
             icon={<EuiIcon title="Loïc Saint-Roch" size="xxl" type="/avatars/loicsaintroch.png" />}
             layout="horizontal" display="transparent"
           >
             <EuiText size="xs">
               <p>
-                <b>Software / Cloud Platform Engineer - Freelance</b>
+                <b>Software / Platform Engineer</b>
               </p>
             </EuiText>
             <EuiSpacer size="m" />
-            <EuiText size="s">
+            <EuiText>
               <p>
-                When working with companies, I sometimes have the opportunity to
-                deliver something generic enough that it can be leveraged by others.
-                When this happens, I do my best to make it open source. Nunchi is
-                the organization I publish my professional open source work to.
+                After building and maintaining Data Planes and Cloud Platforms at scale
+                for some organizations, I've decided to come with the most elegant solution
+                possible to automate recurring work, while still allowing other engineers
+                and companies to benefit from it.
+              </p>
+              <p>
+                Nunchi is the organization I publish my professional work on. I hope it
+                makes your development a bit easier!
               </p>
             </EuiText>
-            <EuiSpacer size="m" />
-            <EuiFlexGroup gutterSize="l">
+            <EuiSpacer size="l" />
+            <EuiFlexGroup>
               <EuiFlexItem>
-                <EuiButtonEmpty iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/loicsaintroch">
+                <EuiButton color="text" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/loicsaintroch">
                   @loicsaintroch
-                </EuiButtonEmpty>
+                </EuiButton>
               </EuiFlexItem>
               <EuiFlexItem>
-                <EuiButtonEmpty iconType={`/icons/twitter-${colorMode}.svg`} href="https://twitter.com/loicsaintroch">
+                <EuiButton color="text" iconType={`/icons/twitter-${colorMode}.svg`} href="https://twitter.com/loicsaintroch">
                   @loicsaintroch
-                </EuiButtonEmpty>
+                </EuiButton>
               </EuiFlexItem>
               <EuiFlexItem>
-                <EuiButtonEmpty iconType={`/icons/linkedin-${colorMode}.svg`} href="https://linkedin.com/in/loicsaintroch">
+                <EuiButton color="text" iconType={`/icons/linkedin-${colorMode}.svg`} href="https://linkedin.com/in/loicsaintroch">
                   /in/loicsaintroch
-                </EuiButtonEmpty>
+                </EuiButton>
               </EuiFlexItem>
             </EuiFlexGroup>
           </EuiCard>
