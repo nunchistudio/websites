@@ -63,7 +63,7 @@ function Home(props) {
             <EuiSpacer size="l" />
             <EuiFlexGroup>
               <EuiFlexItem grow={false}>
-                <EuiButton color="primary" href="/helix/integrations" iconType="layers">
+                <EuiButton color="primary" href="/helix/integration" iconType="layers">
                   Discover integrations
                 </EuiButton>
               </EuiFlexItem>
