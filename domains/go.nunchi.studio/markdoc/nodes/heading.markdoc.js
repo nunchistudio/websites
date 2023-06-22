@@ -12,9 +12,10 @@ function generateID(children, attributes) {
   return children
     .filter((child) => typeof child === 'string')
     .join(' ')
-    .replace(/[?]/g, '')
-    .replace(/\s+/g, '-')
-    .toLowerCase();
+    .replace('func ', '')
+    .replace('type ', '')
+    .replace(/^\(\*|^\(/i , '')
+    .replace(/\) /i , '.');
 };
 
 const Heading = (props) => {

@@ -48,9 +48,13 @@ const DocsLayout = (props) => {
     headerMode = 'dark';
   }
 
-  const toc = props.markdoc?.content
+  let toc = props.markdoc?.content
     ? collectHeadings(props.markdoc.content)
     : [];
+
+  if (props.disableDefaults) {
+    toc = null;
+  }
 
   props.sideNav.forEach(section => {
     section.id = htmlIdGenerator()();
@@ -74,7 +78,12 @@ const DocsLayout = (props) => {
 
   let link = `https://github.com/nunchistudio/${props.repository}`;
   if (props.markdoc.frontmatter.location != null) {
-    link += '/blob/main';
+    if (props.markdoc.frontmatter.location == "/") {
+      link += '/tree/main'
+    } else {
+      link += '/blob/main';
+    }
+
     link += props.markdoc.frontmatter.location;
   }
 
@@ -146,9 +155,11 @@ const DocsLayout = (props) => {
                 }
                 <EuiSpacer size='xl' />
               </EuiFlexItem>
-              <EuiFlexItem grow={2}>
-                <TableOfContents toc={toc} />
-              </EuiFlexItem>
+              {toc &&
+                <EuiFlexItem grow={2}>
+                  <TableOfContents toc={toc} />
+                </EuiFlexItem>
+              }
             </EuiFlexGroup>
           </EuiPageTemplate.Section>
         </EuiPageTemplate>

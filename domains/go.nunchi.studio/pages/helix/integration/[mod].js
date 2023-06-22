@@ -33,11 +33,11 @@ function Integration(props) {
   return (
     <>
       <NextHead>
-        <title>Go package: {props.mod}</title>
+        <title>Go module: {props.mod}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="go-import" content="go.nunchi.studio/helix git https://github.com/nunchistudio/helix.go" />
         <meta name="go-source" content="go.nunchi.studio/helix https://github.com/nunchistudio/helix.go https://github.com/nunchistudio/helix.go/tree/main{/dir} https://github.com/nunchistudio/helix.go/tree/main{/dir}/{file}#L{line}" />
-        <meta httpEquiv="refresh" content={`0; url=https://pkg.go.dev/go.nunchi.studio/helix/integration/${props.mod}`} />
+        <meta httpEquiv="refresh" content={`0; url=/helix/ref/integration/${props.mod}`} />
       </NextHead>
     </>
   );

@@ -6,6 +6,7 @@
 sync/helix:
 	bash ./domains/nunchi.studio/scripts/sync.sh
 	bash ./domains/go.nunchi.studio/scripts/sync.sh
+	bash ./domains/go.nunchi.studio/scripts/godoc.sh
 
 #
 # Sync Markdown files and other assets related to HashiBox.
