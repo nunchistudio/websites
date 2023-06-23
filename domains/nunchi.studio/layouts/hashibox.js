@@ -8,15 +8,15 @@ const Layout = ({ path, markdoc, children }) => {
   const sideNav = [
     {
       name: 'Onboarding',
-      icon: <EuiIcon type="cheer" color="success" />,
+      icon: <EuiIcon type="launch" color="success" />,
       items: [
         {
           name: 'Overview',
-          href: '/overview',
+          href: '/hashibox',
         },
         {
           name: 'Installation',
-          href: '/installation',
+          href: '/hashibox/installation',
         },
       ],
     },
@@ -26,11 +26,11 @@ const Layout = ({ path, markdoc, children }) => {
       items: [
         {
           name: 'Adding Waypoint',
-          href: '/waypoint',
+          href: '/hashibox/waypoint',
         },
         {
           name: 'Maintenance cheatsheet',
-          href: '/maintenance',
+          href: '/hashibox/maintenance',
         },
       ],
     },
@@ -40,14 +40,16 @@ const Layout = ({ path, markdoc, children }) => {
       items: [
         {
           name: 'Community',
-          href: '/join',
+          href: '/hashibox/community',
         },
       ],
     },
   ];
 
   return (
-    <DocsLayout path={path} sideNav={sideNav} markdoc={markdoc} name="HashiBox" repository="hashibox">
+    <DocsLayout path={path} sideNav={sideNav} markdoc={markdoc}
+      name="HashiBox" repository="hashibox" homepage="/hashibox"
+    >
       <EuiSpacer size="xl" />
       {children}
     </DocsLayout>

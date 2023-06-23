@@ -1,15 +1,17 @@
-import { Next404 } from '@nunchistudio/base';
+import { Join } from '@nunchistudio/base';
 
 export async function getStaticProps(context) {
   return {
     props: {
+      name: 'HashiBox',
+      repository: 'hashibox',
       markdoc: {
         frontmatter: {
-          title: 'Page not found'
+          title: 'Community'
         },
       },
     },
   }
 };
 
-export default Next404;
+export default Join;

@@ -85,6 +85,69 @@ function Home(props) {
       <EuiFlexGrid columns={3} gutterSize="xl">
         <EuiFlexItem grow={7}>
           <EuiTitle size="s">
+            <h2>Open source</h2>
+          </EuiTitle>
+        </EuiFlexItem>
+        <EuiFlexItem grow={3}></EuiFlexItem>
+      </EuiFlexGrid>
+
+      <EuiSpacer size="xxl" />
+
+      <EuiFlexGroup gutterSize="xl">
+        <EuiFlexItem grow={6}>
+          <EuiCard paddingSize="none" title="HashiBox" titleElement="h3" titleSize="xs"
+            icon={<EuiIcon type="savedObjectsApp" size="xxl" />}
+            layout="horizontal" display="transparent"
+          >
+            <EuiText>
+              <p>
+                HashiBox is a local environment to simulate a highly-available cloud
+                with Consul, Nomad, and Vault. Optional support for Waypoint. OSS and
+                Enterprise versions of each product are supported.
+              </p>
+            </EuiText>
+            <EuiSpacer size="l" />
+            <EuiFlexGroup>
+              <EuiFlexItem grow={false}>
+                <EuiButton color="success" href="/hashibox" iconType="arrowRight" iconSide="right">
+                  Get started
+                </EuiButton>
+              </EuiFlexItem>
+            </EuiFlexGroup>
+          </EuiCard>
+
+          <EuiSpacer size="l" />
+          <EuiSpacer size="l" />
+
+          <EuiCard paddingSize="none" title="Utilities" titleElement="h3" titleSize="xs"
+            icon={<EuiIcon type="empty" size="xxl" />}
+            layout="horizontal" display="transparent"
+          >
+            <EuiSpacer size="s" />
+            <EuiFlexGroup>
+              <EuiFlexItem grow={false}>
+                <EuiButton color="transparent" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/nunchistudio/platform-starter">
+                  platform-starter
+                </EuiButton>
+              </EuiFlexItem>
+              <EuiFlexItem grow={false}>
+                <EuiButton color="transparent" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/nunchistudio/docker-opentelemetry">
+                  docker-opentelemetry
+                </EuiButton>
+              </EuiFlexItem>
+            </EuiFlexGroup>
+          </EuiCard>
+        </EuiFlexItem>
+        <EuiFlexItem grow={4}></EuiFlexItem>
+      </EuiFlexGroup>
+
+      <EuiSpacer size="xl" />
+      <EuiSpacer size="xl" />
+      <EuiSpacer size="xl" />
+
+      <EuiFlexGrid columns={3} gutterSize="xl">
+        <EuiFlexItem grow={7}>
+          <EuiTitle size="s">
             <h2>Who am I?</h2>
           </EuiTitle>
         </EuiFlexItem>

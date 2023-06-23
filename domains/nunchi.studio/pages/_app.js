@@ -11,14 +11,22 @@ import {
 
 import HomeLayout from '../layouts/home';
 import HelixLayout from '../layouts/helix';
+import HashiBoxLayout from '../layouts/hashibox';
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
   const path = router.asPath;
 
-  let Layout = HomeLayout;
-  if (path.startsWith('/helix')) {
-    Layout = HelixLayout;
+  let Layout;
+  switch (true) {
+    case router.route == '/helix' || router.route.startsWith('/helix/'):
+      Layout = HelixLayout;
+      break;
+    case router.route == '/hashibox' || router.route.startsWith('/hashibox/'):
+      Layout = HashiBoxLayout;
+      break;
+    default:
+      Layout = HomeLayout
   }
 
   const { markdoc } = pageProps;
