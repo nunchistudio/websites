@@ -1,4 +1,4 @@
-.PHONY: sync/hashibox sync/temporalland
+.PHONY: sync/helix sync/hashibox
 
 #
 # Sync Markdown files and other assets related to helix.
@@ -13,10 +13,3 @@ sync/helix:
 #
 sync/hashibox:
 	bash ./domains/nunchi.studio/scripts/hashibox/sync.sh
-
-#
-# Sync Markdown files and other assets related to Temporal Land.
-#
-sync/temporalland:
-	bash ./domains/temporal.land/scripts/sync.sh
-	bash ./domains/go.temporal.land/scripts/sync.sh

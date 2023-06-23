@@ -38,8 +38,6 @@ $ npx turbo run dev --scope <domain>
 Supported `domain`:
 - [`nunchi.studio`](https://nunchi.studio) (port [:3300](http://localhost:3300))
 - [`go.nunchi.studio`](https://go.nunchi.studio) (port [:3301](http://localhost:3301))
-- [`temporal.land`](https://temporal.land) (port [:3500](http://localhost:3500))
-- [`go.temporal.land`](https://go.temporal.land) (port [:3501](http://localhost:3501))
 
 ## Wishlist
 
