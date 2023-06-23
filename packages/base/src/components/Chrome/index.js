@@ -14,16 +14,24 @@ const Chrome = ({ children }) => {
   // inserted after the static CSS files, resulting in style clashes.
   // Only necessary until EUI has converted all components to CSS-in-JS:
   // https://github.com/elastic/eui/issues/3912
-  const emotionCache = createCache({
-    key: 'eui-styles',
+  const defaultCache = createCache({
+    key: 'eui',
     container:
       typeof document !== 'undefined'
-        ? document.querySelector('meta[name="eui-styles-global"]')
+        ? document.querySelector('meta[name="eui-styles"]')
+        : null,
+  });
+
+  const utilityCache = createCache({
+    key: 'util',
+    container:
+      typeof document !== 'undefined'
+        ? document.querySelector('meta[name="eui-styles-utility"]')
         : null,
   });
 
   return (
-    <EuiProvider cache={emotionCache} colorMode={colorMode}>
+    <EuiProvider cache={{ default: defaultCache, utility: utilityCache }} colorMode={colorMode}>
       {children}
     </EuiProvider>
   );

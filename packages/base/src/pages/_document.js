@@ -29,15 +29,16 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="eui-styles-global" />
           <meta name="referrer" content="strict-origin" />
 
+          <meta name="eui-styles" />
           {themeConfig.availableThemes.map(each => themeLink(each))}
+          <meta name="eui-styles-utility" />
 
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <body className="guideBody">
+        <body>
           <Main />
           <NextScript />
         </body>

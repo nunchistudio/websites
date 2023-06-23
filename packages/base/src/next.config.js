@@ -14,6 +14,9 @@ module.exports = withMarkdoc({ mode: 'static' })({
   poweredByHeader: false,
   reactStrictMode: true,
   pageExtensions: ['js', 'md'],
+  compiler: {
+    emotion: true,
+  },
   images: {
     loader: 'custom',
   },
