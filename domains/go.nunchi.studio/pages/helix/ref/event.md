@@ -24,7 +24,7 @@ This package must not import any other package of this ecosystem.
 - [type Device](<#Device>)
 - [type Event](<#Event>)
   - [func EventFromContext\(ctx context.Context\) \(Event, bool\)](<#EventFromContext>)
-  - [func FromJSON\(input json.RawMessage\) \(Event, bool\)](<#FromJSON>)
+  - [func EventFromJSON\(input json.RawMessage\) \(Event, bool\)](<#EventFromJSON>)
 - [type Library](<#Library>)
 - [type Location](<#Location>)
 - [type Network](<#Network>)
@@ -206,13 +206,13 @@ func EventFromContext(ctx context.Context) (Event, bool)
 
 EventFromContext returns the Event found in the context passed, if any. If no Event has been found, it tries to find and build one if a Baggage was found in the context. Returns true if an Event has been found, false otherwise.
 
-### func [FromJSON](<https://github.com/nunchistudio/helix.go/blob/main/event/json.go#L30>)
+### func [EventFromJSON](<https://github.com/nunchistudio/helix.go/blob/main/event/json.go#L30>)
 
 ```go
-func FromJSON(input json.RawMessage) (Event, bool)
+func EventFromJSON(input json.RawMessage) (Event, bool)
 ```
 
-FromJSON returns the Event found at the "event" key in the JSON\-encoded data passed, if any. Returns true if an Event has been found, false otherwise.
+EventFromJSON returns the Event found at the "event" key in the JSON\-encoded data passed, if any. Returns true if an Event has been found, false otherwise.
 
 ## type [Library](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L28-L31>)
 

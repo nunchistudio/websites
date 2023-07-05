@@ -40,6 +40,10 @@ const Layout = ({ path, markdoc, children }) => {
               href: '/helix/ref/integration/rest',
             },
             {
+              name: 'temporal',
+              href: '/helix/ref/integration/temporal',
+            },
+            {
               name: 'vault',
               href: '/helix/ref/integration/vault',
             },
