@@ -28,7 +28,7 @@ This package must not import any other package of this ecosystem.
   - [func WithIntegration\(inte string\) With](<#WithIntegration>)
 
 
-## type Error
+## type [Error](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L18-L42>)
 
 Error implements the Go native error type and is designed for handling errors in the helix.go ecosystem. When exposing errors to clients \(such as via HTTP API\), the root error should not give away too much information such as internal messages.
 
@@ -60,7 +60,7 @@ type Error struct {
 }
 ```
 
-### func New
+### func [New](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L63>)
 
 ```go
 func New(message string, opts ...With) *Error
@@ -68,7 +68,7 @@ func New(message string, opts ...With) *Error
 
 New returns a new error given the message and options passed.
 
-### func NewFromError
+### func [NewFromError](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L79>)
 
 ```go
 func NewFromError(existing error, opts ...With) *Error
@@ -76,7 +76,7 @@ func NewFromError(existing error, opts ...With) *Error
 
 NewFromError returns a new error given the existing error and options passed.
 
-### func \(\*Error\) Error
+### func \(\*Error\) [Error](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L131>)
 
 ```go
 func (err *Error) Error() string
@@ -84,7 +84,7 @@ func (err *Error) Error() string
 
 Error returns the stringified version of the error, including its validation failures.
 
-### func \(\*Error\) HasChildren
+### func \(\*Error\) [HasChildren](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L123>)
 
 ```go
 func (err *Error) HasChildren() bool
@@ -92,7 +92,7 @@ func (err *Error) HasChildren() bool
 
 HasChildren indicates if an error caused other \(a.k.a. children\) errors.
 
-### func \(\*Error\) HasValidations
+### func \(\*Error\) [HasValidations](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L107>)
 
 ```go
 func (err *Error) HasValidations() bool
@@ -100,7 +100,7 @@ func (err *Error) HasValidations() bool
 
 HasValidations indicates if an error encountered validation failures.
 
-### func \(\*Error\) WithChildren
+### func \(\*Error\) [WithChildren](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L115>)
 
 ```go
 func (err *Error) WithChildren(children ...error) error
@@ -108,7 +108,7 @@ func (err *Error) WithChildren(children ...error) error
 
 WithChildren adds a list of child errors encountered related to the current error.
 
-### func \(\*Error\) WithValidations
+### func \(\*Error\) [WithValidations](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L99>)
 
 ```go
 func (err *Error) WithValidations(validations ...Validation) *Error
@@ -116,7 +116,7 @@ func (err *Error) WithValidations(validations ...Validation) *Error
 
 WithValidations adds validation failures to an error.
 
-## type Validation
+## type [Validation](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/error.go#L47-L58>)
 
 Validation holds some details about a validation failure.
 
@@ -135,7 +135,7 @@ type Validation struct {
 }
 ```
 
-## type With
+## type [With](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/with.go#L6>)
 
 With allows to set optional values when creating a new error with New.
 
@@ -143,7 +143,7 @@ With allows to set optional values when creating a new error with New.
 type With func(*Error)
 ```
 
-### func WithIntegration
+### func [WithIntegration](<https://github.com/nunchistudio/helix.go/blob/main/errorstack/with.go#L11>)
 
 ```go
 func WithIntegration(inte string) With

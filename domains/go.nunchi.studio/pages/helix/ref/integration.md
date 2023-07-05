@@ -19,7 +19,7 @@ Package integration exposes the requirements that an integration must meet to be
 - [type Integration](<#Integration>)
 
 
-## type ConfigTLS
+## type [ConfigTLS](<https://github.com/nunchistudio/helix.go/blob/main/integration/config.go#L14-L42>)
 
 ConfigTLS is the common configuration for TLS across all integrations.
 
@@ -55,7 +55,7 @@ type ConfigTLS struct {
 }
 ```
 
-### func \(\*ConfigTLS\) Sanitize
+### func \(\*ConfigTLS\) [Sanitize](<https://github.com/nunchistudio/helix.go/blob/main/integration/config.go#L52>)
 
 ```go
 func (cfg *ConfigTLS) Sanitize() []errorstack.Validation
@@ -67,7 +67,7 @@ Sanitize sets default values \- if applicable \- and validates the configuration
 stack.WithValidations(cfg.TLS.Sanitize()...)
 ```
 
-### func \(\*ConfigTLS\) ToStandardTLS
+### func \(\*ConfigTLS\) [ToStandardTLS](<https://github.com/nunchistudio/helix.go/blob/main/integration/config.go#L81>)
 
 ```go
 func (cfg *ConfigTLS) ToStandardTLS() (*tls.Config, []errorstack.Validation)
@@ -75,7 +75,7 @@ func (cfg *ConfigTLS) ToStandardTLS() (*tls.Config, []errorstack.Validation)
 
 ToStandardTLS tries to return a Go standard \*tls.Config. Returns validation errors if configuration is not valid. This doesn't return a standard error since this function shall only be called by integrations. This allows to easily add error validations to an existing errorstack.
 
-## type Integration
+## type [Integration](<https://github.com/nunchistudio/helix.go/blob/main/integration/integration.go#L10-L29>)
 
 Integration describes the lifecycle of an integration.
 

@@ -27,7 +27,7 @@ Package trace gives access to the global OpenTelemetry tracer configured interna
 - [type SpanKind](<#SpanKind>)
 
 
-## type Span
+## type [Span](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L15-L23>)
 
 Span is the individual component of a Trace. It represents a single named and timed operation of a workflow that is traced. A tracer is used to create a Span and it is then up to the operation the Span represents to properly end the Span when the operation itself ends.
 
@@ -37,7 +37,7 @@ type Span struct {
 }
 ```
 
-### func Start
+### func [Start](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/tracer.go#L22>)
 
 ```go
 func Start(ctx context.Context, kind SpanKind, name string) (context.Context, *Span)
@@ -49,7 +49,7 @@ If the context provided contains a Span then the newly\-created Span will be a c
 
 Any Span that is created must also be ended. This is the responsibility of the user. Implementations of this API may leak memory or other resources if Spans are not ended.
 
-### func \(\*Span\) AddEvent
+### func \(\*Span\) [AddEvent](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L114>)
 
 ```go
 func (s *Span) AddEvent(name string)
@@ -57,7 +57,7 @@ func (s *Span) AddEvent(name string)
 
 AddEvent adds an event to the Span with the provided name.
 
-### func \(\*Span\) Context
+### func \(\*Span\) [Context](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L121>)
 
 ```go
 func (s *Span) Context() trace.SpanContext
@@ -65,7 +65,7 @@ func (s *Span) Context() trace.SpanContext
 
 Context returns the original OpenTelemetry span's context.
 
-### func \(\*Span\) End
+### func \(\*Span\) [End](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L131>)
 
 ```go
 func (s *Span) End()
@@ -73,7 +73,7 @@ func (s *Span) End()
 
 End sets the appropriate status and completes the Span. The Span is considered complete and ready to be delivered through the rest of the telemetry pipeline after this method is called. Therefore, updates to the Span are not allowed after this method has been called.
 
-### func \(\*Span\) RecordError
+### func \(\*Span\) [RecordError](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L104>)
 
 ```go
 func (s *Span) RecordError(msg string, err error)
@@ -81,7 +81,7 @@ func (s *Span) RecordError(msg string, err error)
 
 RecordError will record the error as an exception span event for this Span.
 
-### func \(\*Span\) SetBoolAttribute
+### func \(\*Span\) [SetBoolAttribute](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L83>)
 
 ```go
 func (s *Span) SetBoolAttribute(key string, value bool)
@@ -89,7 +89,7 @@ func (s *Span) SetBoolAttribute(key string, value bool)
 
 SetBoolAttribute sets a boolean attribute to the span.
 
-### func \(\*Span\) SetFloatAttribute
+### func \(\*Span\) [SetFloatAttribute](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L97>)
 
 ```go
 func (s *Span) SetFloatAttribute(key string, value float64)
@@ -97,7 +97,7 @@ func (s *Span) SetFloatAttribute(key string, value float64)
 
 SetFloatAttribute sets a float attribute to the span.
 
-### func \(\*Span\) SetIntAttribute
+### func \(\*Span\) [SetIntAttribute](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L90>)
 
 ```go
 func (s *Span) SetIntAttribute(key string, value int64)
@@ -105,7 +105,7 @@ func (s *Span) SetIntAttribute(key string, value int64)
 
 SetIntAttribute sets a integer attribute to the span.
 
-### func \(\*Span\) SetSliceStringAttribute
+### func \(\*Span\) [SetSliceStringAttribute](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L76>)
 
 ```go
 func (s *Span) SetSliceStringAttribute(key string, value []string)
@@ -113,7 +113,7 @@ func (s *Span) SetSliceStringAttribute(key string, value []string)
 
 SetSliceStringAttribute sets a slice of string attributes to the span.
 
-### func \(\*Span\) SetStringAttribute
+### func \(\*Span\) [SetStringAttribute](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L69>)
 
 ```go
 func (s *Span) SetStringAttribute(key string, value string)
@@ -121,7 +121,7 @@ func (s *Span) SetStringAttribute(key string, value string)
 
 SetStringAttribute sets a string attribute to the span.
 
-## type SpanKind
+## type [SpanKind](<https://github.com/nunchistudio/helix.go/blob/main/telemetry/trace/span.go#L28>)
 
 SpanKind is the role a Span plays in a Trace.
 

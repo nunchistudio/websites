@@ -19,7 +19,7 @@ Package vault exposes an opinionated way to interact with Vault.
   - [func Connect\(cfg Config\) \(Vault, error\)](<#Connect>)
 
 
-## type Config
+## type [Config](<https://github.com/nunchistudio/helix.go/blob/main/integration/vault/config.go#L13-L42>)
 
 Config is used to configure the Vault integration.
 
@@ -56,7 +56,7 @@ type Config struct {
 }
 ```
 
-## type KeyValue
+## type [KeyValue](<https://github.com/nunchistudio/helix.go/blob/main/integration/vault/kv.go#L27-L42>)
 
 KeyValue exposes an opinionated way to interact with Vault Key\-Value v2. All functions automatically handle distributed tracing as well as error recording within traces.
 
@@ -79,7 +79,7 @@ type KeyValue interface {
 }
 ```
 
-## type Vault
+## type [Vault](<https://github.com/nunchistudio/helix.go/blob/main/integration/vault/vault.go#L16-L18>)
 
 Vault exposes an opinionated way to interact with Vault, by bringing automatic distributed tracing as well as error recording within traces.
 
@@ -89,7 +89,7 @@ type Vault interface {
 }
 ```
 
-### func Connect
+### func [Connect](<https://github.com/nunchistudio/helix.go/blob/main/integration/vault/vault.go#L37>)
 
 ```go
 func Connect(cfg Config) (Vault, error)

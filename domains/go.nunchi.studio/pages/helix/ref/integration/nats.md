@@ -20,7 +20,7 @@ Package nats exposes an opinionated way to interact with NATS JetStream. It come
 - [type MsgHandler](<#MsgHandler>)
 
 
-## type Config
+## type [Config](<https://github.com/nunchistudio/helix.go/blob/main/integration/nats/config.go#L11-L25>)
 
 Config is used to configure the NATS integration.
 
@@ -42,7 +42,7 @@ type Config struct {
 }
 ```
 
-## type JetStream
+## type [JetStream](<https://github.com/nunchistudio/helix.go/blob/main/integration/nats/jetstream.go#L31-L69>)
 
 JetStream exposes an opinionated way to interact with NATS JetStream. All functions are wrapped with a context because some of them automatically do distributed tracing \(by using the said context\) as well as error recording within traces.
 
@@ -95,7 +95,7 @@ type JetStream interface {
 }
 ```
 
-### func Connect
+### func [Connect](<https://github.com/nunchistudio/helix.go/blob/main/integration/nats/nats.go#L34>)
 
 ```go
 func Connect(cfg Config) (JetStream, error)
@@ -103,7 +103,7 @@ func Connect(cfg Config) (JetStream, error)
 
 Connect tries to connect to the NATS server given the Config. Returns an error if Config is not valid or if the connection failed.
 
-## type KeyValue
+## type [KeyValue](<https://github.com/nunchistudio/helix.go/blob/main/integration/nats/jetstream_kv.go#L27-L42>)
 
 KeyValue exposes an opinionated way to interact with a NATS JetStream key\-value store. All functions are wrapped with a context because some of them automatically do distributed tracing \(by using the said context\) as well as error recording within traces.
 
@@ -126,7 +126,7 @@ type KeyValue interface {
 }
 ```
 
-## type MsgHandler
+## type [MsgHandler](<https://github.com/nunchistudio/helix.go/blob/main/integration/nats/jetstream.go#L18>)
 
 MsgHandler is like nats.MsgHandler but allows to pass a context for leveraging automatic distributed tracing with OpenTelemetry.
 

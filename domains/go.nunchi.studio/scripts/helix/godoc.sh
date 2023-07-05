@@ -29,6 +29,9 @@ title: \"$1\"
 
   sed -i "" '/./,$!d' \
     ./domains/go.nunchi.studio/pages/helix/ref/$2.md
+
+  sed -i "" 's+blob/main/helix.go+blob/main+g' \
+    ./domains/go.nunchi.studio/pages/helix/ref/$2.md
 }
 
 SyncAndClean "helix" "index"

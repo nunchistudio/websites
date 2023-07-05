@@ -53,7 +53,7 @@ Example:
 const Key string = "event"
 ```
 
-## func ContextWithEvent
+## func [ContextWithEvent](<https://github.com/nunchistudio/helix.go/blob/main/event/context.go#L36>)
 
 ```go
 func ContextWithEvent(ctx context.Context, e Event) context.Context
@@ -61,7 +61,7 @@ func ContextWithEvent(ctx context.Context, e Event) context.Context
 
 ContextWithEvent returns a copy of the context passed with the Event associated to it.
 
-## func ToFlatMap
+## func [ToFlatMap](<https://github.com/nunchistudio/helix.go/blob/main/event/json.go#L92>)
 
 ```go
 func ToFlatMap(e Event) map[string]string
@@ -103,7 +103,7 @@ map[string]string = {
 }
 ```
 
-## type App
+## type [App](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L19-L23>)
 
 App holds the details about the client application executing the event.
 
@@ -115,7 +115,7 @@ type App struct {
 }
 ```
 
-## type Campaign
+## type [Campaign](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L37-L43>)
 
 Campaign holds the details about the marketing campaign from which a client is executing the event from.
 
@@ -129,7 +129,7 @@ type Campaign struct {
 }
 ```
 
-## type Cloud
+## type [Cloud](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L60-L66>)
 
 Cloud holds the details about the cloud provider from which the client is executing the event.
 
@@ -143,7 +143,7 @@ type Cloud struct {
 }
 ```
 
-## type Device
+## type [Device](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L71-L79>)
 
 Device holds the details about the user's device.
 
@@ -159,7 +159,7 @@ type Device struct {
 }
 ```
 
-## type Event
+## type [Event](<https://github.com/nunchistudio/helix.go/blob/main/event/event.go#L27-L51>)
 
 Event is a dictionary of information that provides useful context about an event. An Event shall be present as much as possible when passing data across services, allowing to better understand the origin of an event.
 
@@ -198,7 +198,7 @@ type Event struct {
 }
 ```
 
-### func EventFromContext
+### func [EventFromContext](<https://github.com/nunchistudio/helix.go/blob/main/event/context.go#L21>)
 
 ```go
 func EventFromContext(ctx context.Context) (Event, bool)
@@ -206,7 +206,7 @@ func EventFromContext(ctx context.Context) (Event, bool)
 
 EventFromContext returns the Event found in the context passed, if any. If no Event has been found, it tries to find and build one if a Baggage was found in the context. Returns true if an Event has been found, false otherwise.
 
-### func FromJSON
+### func [FromJSON](<https://github.com/nunchistudio/helix.go/blob/main/event/json.go#L30>)
 
 ```go
 func FromJSON(input json.RawMessage) (Event, bool)
@@ -214,7 +214,7 @@ func FromJSON(input json.RawMessage) (Event, bool)
 
 FromJSON returns the Event found at the "event" key in the JSON\-encoded data passed, if any. Returns true if an Event has been found, false otherwise.
 
-## type Library
+## type [Library](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L28-L31>)
 
 Library holds the details of the SDK used by the client executing the event.
 
@@ -225,7 +225,7 @@ type Library struct {
 }
 ```
 
-## type Location
+## type [Location](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L93-L100>)
 
 Location holds the details about the user's location.
 
@@ -240,7 +240,7 @@ type Location struct {
 }
 ```
 
-## type Network
+## type [Network](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L105-L110>)
 
 Network holds the details about the user's network.
 
@@ -253,7 +253,7 @@ type Network struct {
 }
 ```
 
-## type OS
+## type [OS](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L84-L88>)
 
 OS holds the details about the user's OS.
 
@@ -265,7 +265,7 @@ type OS struct {
 }
 ```
 
-## type Page
+## type [Page](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L115-L121>)
 
 Page holds the details about the webpage from which the event is triggered from.
 
@@ -279,7 +279,7 @@ type Page struct {
 }
 ```
 
-## type Referrer
+## type [Referrer](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L49-L54>)
 
 Referrer holds the details about the marketing referrer from which a client is executing the event from.
 
@@ -292,7 +292,7 @@ type Referrer struct {
 }
 ```
 
-## type Screen
+## type [Screen](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L127-L131>)
 
 Screen holds the details about the app's screen from which the event is triggered from.
 
@@ -304,7 +304,7 @@ type Screen struct {
 }
 ```
 
-## type Subscription
+## type [Subscription](<https://github.com/nunchistudio/helix.go/blob/main/event/objects.go#L7-L14>)
 
 Subscription holds the details about the account/customer from which the event has been triggered. It's useful for tracking customer usages.
 

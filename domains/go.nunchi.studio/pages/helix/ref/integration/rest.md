@@ -21,7 +21,7 @@ Package rest exposes opinionated HTTP REST resources respecting the standards of
 - [type Response](<#Response>)
 
 
-## func ParamsFromContext
+## func [ParamsFromContext](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/context.go#L13>)
 
 ```go
 func ParamsFromContext(ctx context.Context) (map[string]string, bool)
@@ -29,7 +29,7 @@ func ParamsFromContext(ctx context.Context) (map[string]string, bool)
 
 ParamsFromContext returns request's params found in the context passed, if any. Returns true if some params are present, false otherwise.
 
-## type Config
+## type [Config](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/config.go#L13-L43>)
 
 Config is used to configure the HTTP REST integration.
 
@@ -67,7 +67,7 @@ type Config struct {
 }
 ```
 
-## type ConfigOpenAPI
+## type [ConfigOpenAPI](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/config.go#L51-L64>)
 
 ConfigOpenAPI configures OpenAPI behavior within the REST API. When enabled, HTTP requests and responses are automatically validated againt the description passed. If a request is not valid, a 4xx error is returned to the client. If a response is not valid, an error is logged but the response is still returned to the client.
 
@@ -88,7 +88,7 @@ type ConfigOpenAPI struct {
 }
 ```
 
-## type REST
+## type [REST](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/rest.go#L16-L24>)
 
 REST exposes the HTTP REST API functions.
 
@@ -104,7 +104,7 @@ type REST interface {
 }
 ```
 
-### func New
+### func [New](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/rest.go#L52>)
 
 ```go
 func New(cfg Config) (REST, error)
@@ -112,7 +112,7 @@ func New(cfg Config) (REST, error)
 
 New tries to build a new HTTP API server for Config. Returns an error if Config or OpenAPI description are not valid.
 
-## type Response
+## type [Response](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/response.go#L50-L54>)
 
 Response is the JSON object every HTTP responses shall return.
 

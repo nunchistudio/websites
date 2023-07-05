@@ -19,7 +19,7 @@ Package postgres exposes an opinionated way to interact with PostgreSQL.
 - [type Tx](<#Tx>)
 
 
-## type Config
+## type [Config](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/config.go#L12-L42>)
 
 Config is used to configure the PostgreSQL integration.
 
@@ -57,7 +57,7 @@ type Config struct {
 }
 ```
 
-## type PostgreSQL
+## type [PostgreSQL](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/postgres.go#L19-L27>)
 
 PostgreSQL exposes an opinionated way to interact with PostgreSQL, by bringing automatic distributed tracing as well as error recording within traces.
 
@@ -73,7 +73,7 @@ type PostgreSQL interface {
 }
 ```
 
-### func Connect
+### func [Connect](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/postgres.go#L46>)
 
 ```go
 func Connect(cfg Config) (PostgreSQL, error)
@@ -81,7 +81,7 @@ func Connect(cfg Config) (PostgreSQL, error)
 
 Connect tries to connect to the PostgreSQL server given the Config. Returns an error if Config is not valid or if the connection failed.
 
-## type Tx
+## type [Tx](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/transaction.go#L25-L35>)
 
 Tx represents a database transaction.
 

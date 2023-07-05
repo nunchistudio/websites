@@ -18,7 +18,7 @@ Package service allows to manage a service, as well as managing integrations' li
 - [func Start\(\) error](<#Start>)
 
 
-## func Attach
+## func [Attach](<https://github.com/nunchistudio/helix.go/blob/main/service/integration.go#L14>)
 
 ```go
 func Attach(inte integration.Integration) error
@@ -26,7 +26,7 @@ func Attach(inte integration.Integration) error
 
 Attach allows to attach a third\-party integration to a service. When attached, the Init and Close methods of the integration are automatically called when the service is initializing and stopping, so they shouldn't be called manually by the clients.
 
-## func Close
+## func [Close](<https://github.com/nunchistudio/helix.go/blob/main/service/service.go#L112>)
 
 ```go
 func Close() error
@@ -34,7 +34,7 @@ func Close() error
 
 Close tries to gracefully close connections with all integrations. It then tries to drain/close the tracer and logger.
 
-## func Start
+## func [Start](<https://github.com/nunchistudio/helix.go/blob/main/service/service.go#L50>)
 
 ```go
 func Start() error

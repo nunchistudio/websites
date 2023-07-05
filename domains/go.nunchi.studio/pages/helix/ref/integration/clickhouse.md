@@ -19,7 +19,7 @@ Package clickhouse exposes an opinionated way to interact with ClickHouse.
 - [type Config](<#Config>)
 
 
-## type Batch
+## type [Batch](<https://github.com/nunchistudio/helix.go/blob/main/integration/clickhouse/batch.go#L27-L33>)
 
 Batch exposes an opinionated way to interact with a ClickHouse batch capabilities. All functions are wrapped with a context because some of them automatically do distributed tracing \(by using the said context\) as well as error recording within traces.
 
@@ -33,7 +33,7 @@ type Batch interface {
 }
 ```
 
-## type ClickHouse
+## type [ClickHouse](<https://github.com/nunchistudio/helix.go/blob/main/integration/clickhouse/clickhouse.go#L19-L25>)
 
 ClickHouse exposes an opinionated way to interact with ClickHouse, by bringing automatic distributed tracing as well as error recording within traces.
 
@@ -47,7 +47,7 @@ type ClickHouse interface {
 }
 ```
 
-### func Connect
+### func [Connect](<https://github.com/nunchistudio/helix.go/blob/main/integration/clickhouse/clickhouse.go#L44>)
 
 ```go
 func Connect(cfg Config) (ClickHouse, error)
@@ -55,7 +55,7 @@ func Connect(cfg Config) (ClickHouse, error)
 
 Connect tries to connect to the ClickHouse server given the Config. Returns an error if Config is not valid or if the connection failed.
 
-## type Config
+## type [Config](<https://github.com/nunchistudio/helix.go/blob/main/integration/clickhouse/config.go#L11-L35>)
 
 Config is used to configure the ClickHouse integration.
 
