@@ -12,6 +12,10 @@ function Home(props) {
 
   return (
     <>
+      <EuiSpacer size="xl" />
+      <EuiSpacer size="xl" />
+      <EuiSpacer size="xl" />
+
       <EuiFlexGroup gutterSize="xl">
         <EuiFlexItem grow={6}>
           <EuiTitle size="l">
