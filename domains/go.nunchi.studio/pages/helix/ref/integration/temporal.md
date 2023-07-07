@@ -52,7 +52,7 @@ EventFromWorkflow tries to retrieve an Event from the workflow's context. Return
 
 If an Event was found, it is added to the span attributes.
 
-## type [Client](<https://github.com/nunchistudio/helix.go/blob/main/integration/temporal/client.go#L27-L53>)
+## type [Client](<https://github.com/nunchistudio/helix.go/blob/main/integration/temporal/client.go#L27-L51>)
 
 Client exposes an opinionated way to interact with Temporal's client capabilities.
 
@@ -79,8 +79,6 @@ type Client interface {
     DescribeWorkflowExecution(ctx context.Context, workflowID string, runID string) (*workflowservice.DescribeWorkflowExecutionResponse, error)
     DescribeTaskQueue(ctx context.Context, taskqueue string, taskqueueType enums.TaskQueueType) (*workflowservice.DescribeTaskQueueResponse, error)
     ResetWorkflowExecution(ctx context.Context, request *workflowservice.ResetWorkflowExecutionRequest) (*workflowservice.ResetWorkflowExecutionResponse, error)
-
-    CheckHealth(ctx context.Context, request *client.CheckHealthRequest) (*client.CheckHealthResponse, error)
 
     ScheduleClient() ScheduleClient
 }

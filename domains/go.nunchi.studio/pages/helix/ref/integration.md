@@ -75,7 +75,7 @@ func (cfg *ConfigTLS) ToStandardTLS() (*tls.Config, []errorstack.Validation)
 
 ToStandardTLS tries to return a Go standard \*tls.Config. Returns validation errors if configuration is not valid. This doesn't return a standard error since this function shall only be called by integrations. This allows to easily add error validations to an existing errorstack.
 
-## type [Integration](<https://github.com/nunchistudio/helix.go/blob/main/integration/integration.go#L10-L29>)
+## type [Integration](<https://github.com/nunchistudio/helix.go/blob/main/integration/integration.go#L10-L35>)
 
 Integration describes the lifecycle of an integration.
 
@@ -99,6 +99,12 @@ type Integration interface {
 
     // Close closes the connection with the integration, if applicable.
     Close(ctx context.Context) error
+
+    // Status executes a health check of the integration. It returns an equivalent
+    // HTTP status code of the health. It should most likely be `200` or `503`.
+    // If the integration is unhealthy, it may return an error as well depending
+    // on the underlying client.
+    Status(ctx context.Context) (int, error)
 }
 ```
 

@@ -112,7 +112,7 @@ func New(cfg Config) (REST, error)
 
 New tries to build a new HTTP API server for Config. Returns an error if Config or OpenAPI description are not valid.
 
-## type [Response](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/response.go#L50-L54>)
+## type [Response](<https://github.com/nunchistudio/helix.go/blob/main/integration/rest/response.go#L51-L55>)
 
 Response is the JSON object every HTTP responses shall return.
 
