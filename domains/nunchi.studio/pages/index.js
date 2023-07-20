@@ -186,19 +186,24 @@ function Home(props) {
             </EuiText>
             <EuiSpacer size="l" />
             <EuiFlexGroup>
-              <EuiFlexItem>
+              <EuiFlexItem grow={false}>
                 <EuiButton color="text" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/loicsaintroch">
                   @loicsaintroch
                 </EuiButton>
               </EuiFlexItem>
-              <EuiFlexItem>
+              <EuiFlexItem grow={false}>
                 <EuiButton color="text" iconType={`/icons/twitter-${colorMode}.svg`} href="https://twitter.com/loicsaintroch">
                   @loicsaintroch
                 </EuiButton>
               </EuiFlexItem>
-              <EuiFlexItem>
+              <EuiFlexItem grow={false}>
                 <EuiButton color="text" iconType={`/icons/linkedin-${colorMode}.svg`} href="https://linkedin.com/in/loicsaintroch">
                   /in/loicsaintroch
+                </EuiButton>
+              </EuiFlexItem>
+              <EuiFlexItem grow={false}>
+                <EuiButton color="text" iconType="email" href="mailto:loic@nunchi.studio">
+                  loic@nunchi.studio
                 </EuiButton>
               </EuiFlexItem>
             </EuiFlexGroup>
