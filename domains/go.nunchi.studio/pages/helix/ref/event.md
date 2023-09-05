@@ -161,7 +161,7 @@ type Device struct {
 }
 ```
 
-## type [Event](<https://github.com/nunchistudio/helix.go/blob/main/event/event.go#L32-L56>)
+## type [Event](<https://github.com/nunchistudio/helix.go/blob/main/event/event.go#L32-L57>)
 
 Event is a dictionary of information that provides useful context about an event. An Event shall be present as much as possible when passing data across services, allowing to better understand the origin of an event.
 
@@ -180,6 +180,7 @@ type Event struct {
     IsAnonymous   bool              `json:"is_anonymous"`
     UserID        string            `json:"user_id,omitempty"`
     GroupID       string            `json:"group_id,omitempty"`
+    TenantID      string            `json:"tenant_id,omitempty"`
     IP            net.IP            `json:"ip,omitempty"`
     UserAgent     string            `json:"user_agent,omitempty"`
     Locale        string            `json:"locale,omitempty"`
