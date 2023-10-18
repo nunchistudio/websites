@@ -57,7 +57,7 @@ type Config struct {
 }
 ```
 
-## type [PostgreSQL](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/postgres.go#L19-L27>)
+## type [PostgreSQL](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/postgres.go#L20-L26>)
 
 PostgreSQL exposes an opinionated way to interact with PostgreSQL, by bringing automatic distributed tracing as well as error recording within traces.
 
@@ -65,15 +65,13 @@ PostgreSQL exposes an opinionated way to interact with PostgreSQL, by bringing a
 type PostgreSQL interface {
     BeginTx(ctx context.Context, txOptions pgx.TxOptions) (Tx, error)
     Exec(ctx context.Context, query string, args ...any) (pgconn.CommandTag, error)
-    Prepare(ctx context.Context, id string, query string) (*pgconn.StatementDescription, error)
     Query(ctx context.Context, query string, args ...any) (pgx.Rows, error)
     QueryRow(ctx context.Context, query string, args ...any) pgx.Row
     SendBatch(ctx context.Context, batch *pgx.Batch) pgx.BatchResults
-    WaitForNotification(ctx context.Context) (*pgconn.Notification, error)
 }
 ```
 
-### func [Connect](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/postgres.go#L46>)
+### func [Connect](<https://github.com/nunchistudio/helix.go/blob/main/integration/postgres/postgres.go#L45>)
 
 ```go
 func Connect(cfg Config) (PostgreSQL, error)

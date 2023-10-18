@@ -161,7 +161,7 @@ type Device struct {
 }
 ```
 
-## type [Event](<https://github.com/nunchistudio/helix.go/blob/main/event/event.go#L32-L57>)
+## type [Event](<https://github.com/nunchistudio/helix.go/blob/main/event/event.go#L32-L58>)
 
 Event is a dictionary of information that provides useful context about an event. An Event shall be present as much as possible when passing data across services, allowing to better understand the origin of an event.
 
@@ -174,6 +174,7 @@ This is heavily inspired by the following references, and was adapted to better 
 
 ```go
 type Event struct {
+    ID            string            `json:"id,omitempty"`
     Name          string            `json:"name,omitempty"`
     Meta          map[string]string `json:"meta,omitempty"`
     Params        url.Values        `json:"params,omitempty"`
@@ -307,13 +308,14 @@ type Screen struct {
 }
 ```
 
-## type [Subscription](<https://github.com/nunchistudio/helix.go/blob/main/event/event_subscription.go#L15-L22>)
+## type [Subscription](<https://github.com/nunchistudio/helix.go/blob/main/event/event_subscription.go#L15-L23>)
 
 Subscription holds the details about the account/customer from which the event has been triggered. It's useful for tracking customer usages.
 
 ```go
 type Subscription struct {
     ID          string            `json:"id,omitempty"`
+    TenantID    string            `json:"tenant_id,omitempty"`
     CustomerID  string            `json:"customer_id,omitempty"`
     PlanID      string            `json:"plan_id,omitempty"`
     Usage       string            `json:"usage,omitempty"`
