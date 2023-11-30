@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import { Analytics } from '@vercel/analytics/react';
 
 import { EuiErrorBoundary } from '@elastic/eui';
 import { Global } from '@emotion/react';
@@ -39,7 +38,6 @@ const App = ({ Component, pageProps }) => {
           <EuiErrorBoundary>
             <Layout path={path} markdoc={markdoc}>
               <Component {...pageProps} />
-              <Analytics />
             </Layout>
           </EuiErrorBoundary>
         </Chrome>
