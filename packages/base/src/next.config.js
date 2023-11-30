@@ -85,12 +85,10 @@ function buildThemeConfig() {
     const basename = path.basename(each, '.min.css');
 
     const themeId = basename.replace(/^eui_theme_/, '');
-
-    const themeName =
-      themeId[0].toUpperCase() + themeId.slice(1).replace(/_/g, ' ');
+    const themeName = themeId[0].toUpperCase() + themeId.slice(1).replace(/_/g, ' ');
 
     const publicPath = `themes/${basename}.${hashFile(each)}.min.css`;
-    const toPath = path.resolve( `public`, `themes`, `${basename}.${hashFile(each)}.min.css`);
+    const toPath = path.resolve('public', 'themes', `${basename}.${hashFile(each)}.min.css`);
 
     themeConfig.availableThemes.push({
       id: themeId,
@@ -108,10 +106,10 @@ function buildThemeConfig() {
 }
 
 function hashFile(filePath) {
-  const hash = crypto.createHash(`sha256`);
+  const hash = crypto.createHash('sha256');
   const fileData = fs.readFileSync(filePath);
   hash.update(fileData);
 
-  const fullHash = hash.digest(`hex`);
+  const fullHash = hash.digest('hex');
   return fullHash.substr(0, 20);
 }
