@@ -25,10 +25,6 @@ const Layout = ({ path, markdoc, children }) => {
       icon: <EuiIcon type="listAdd" color="primary" />,
       items: [
         {
-          name: 'Adding Waypoint',
-          href: '/hashibox/waypoint',
-        },
-        {
           name: 'Maintenance cheatsheet',
           href: '/hashibox/maintenance',
         },

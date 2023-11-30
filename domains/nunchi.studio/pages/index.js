@@ -106,8 +106,8 @@ function Home(props) {
             <EuiText>
               <p>
                 HashiBox is a local environment to simulate a highly-available cloud
-                with Consul, Nomad, and Vault. Optional support for Waypoint. OSS and
-                Enterprise versions of each product are supported.
+                with Consul, Nomad, and Vault. OSS and Enterprise versions of each product
+                are supported.
               </p>
             </EuiText>
             <EuiSpacer size="l" />
