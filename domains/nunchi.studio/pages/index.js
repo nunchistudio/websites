@@ -39,7 +39,7 @@ function Home(props) {
       <EuiFlexGrid columns={3} gutterSize="xl">
         <EuiFlexItem grow={7}>
           <EuiTitle size="s">
-            <h2>Products</h2>
+            <h2>Open source</h2>
           </EuiTitle>
         </EuiFlexItem>
         <EuiFlexItem grow={3}></EuiFlexItem>
@@ -60,9 +60,6 @@ function Home(props) {
                 I've decided to put my knowledge and experiences into helix so I can
                 deliver a consistent and high quality of work.
               </p>
-              <p>
-                Source code is available for anyone who wishes to use it!
-              </p>
             </EuiText>
             <EuiSpacer size="l" />
             <EuiFlexGroup>
@@ -78,27 +75,10 @@ function Home(props) {
               </EuiFlexItem>
             </EuiFlexGroup>
           </EuiCard>
-        </EuiFlexItem>
-        <EuiFlexItem grow={4}></EuiFlexItem>
-      </EuiFlexGroup>
 
-      <EuiSpacer size="xl" />
-      <EuiSpacer size="xl" />
-      <EuiSpacer size="xl" />
+          <EuiSpacer size="xl" />
+          <EuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={3} gutterSize="xl">
-        <EuiFlexItem grow={7}>
-          <EuiTitle size="s">
-            <h2>Open source</h2>
-          </EuiTitle>
-        </EuiFlexItem>
-        <EuiFlexItem grow={3}></EuiFlexItem>
-      </EuiFlexGrid>
-
-      <EuiSpacer size="xxl" />
-
-      <EuiFlexGroup gutterSize="xl">
-        <EuiFlexItem grow={6}>
           <EuiCard paddingSize="none" title="HashiBox" titleElement="h3" titleSize="xs"
             icon={<EuiIcon type="savedObjectsApp" size="xxl" />}
             layout="horizontal" display="transparent"
