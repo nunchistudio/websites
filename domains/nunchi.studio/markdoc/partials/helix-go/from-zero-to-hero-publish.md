@@ -9,12 +9,9 @@ import (
   "net/http"
 
   "go.nunchi.studio/helix/event"
-  natsinte "go.nunchi.studio/helix/integration/nats"
+  "go.nunchi.studio/helix/integration/nats"
   "go.nunchi.studio/helix/integration/rest"
-  "go.nunchi.studio/helix/integration/rest/handlerfunc"
   "go.nunchi.studio/helix/service"
-  
-  "github.com/nats-io/nats.go"
 )
 
 /*
@@ -23,7 +20,7 @@ case, it holds a REST router and NATS JetStream context.
 */
 type App struct {
   REST      rest.REST
-  JetStream natsinte.JetStream
+  JetStream nats.JetStream
 }
 
 /*
@@ -45,7 +42,7 @@ func NewAndStart() error {
 
   // Then, create a new NATS JetStream context. We keep empty config but feel
   // free to dive more later for advanced configuration.
-  js, err := natsinte.Connect(natsinte.Config{})
+  js, err := nats.Connect(nats.Config{})
   if err != nil {
     return err
   }
@@ -89,7 +86,7 @@ func NewAndStart() error {
 
     js.Publish(ctx, msg)
 
-    handlerfunc.Accepted(rw, req)
+    rest.WriteAccepted(rw, req)
   })
 
   // Start the service using the helix's service package. Only one helix service
