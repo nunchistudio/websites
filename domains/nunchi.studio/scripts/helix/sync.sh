@@ -23,6 +23,14 @@ for mod in $integrations; do
   cp ../helix.go/documentation/integration/$mod.md ./domains/nunchi.studio/markdoc/partials/helix-go/integration/$mod.md
 done
 
+find ./domains/nunchi.studio/markdoc/partials/helix-ts -name "*.md" -exec rm -rf \;
+cp ../helix.ts/documentation/*.md ./domains/nunchi.studio/markdoc/partials/helix-ts
+rm -rf ./domains/nunchi.studio/markdoc/partials/helix-ts/integration
+mkdir -p ./domains/nunchi.studio/markdoc/partials/helix-ts/integration
+for mod in $integrations; do
+  cp ../helix.ts/documentation/integration/$mod.md ./domains/nunchi.studio/markdoc/partials/helix-ts/integration/$mod.md 2>/dev/null
+done
+
 rm -rf ./domains/nunchi.studio/public/helix
 
 mkdir -p ./domains/nunchi.studio/public/helix/descriptions

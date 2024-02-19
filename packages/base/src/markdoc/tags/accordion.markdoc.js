@@ -30,7 +30,6 @@ const Callout = (props) => {
     <>
       <EuiAccordion id={useGeneratedHtmlId()}
         className="euiAccordionForm"
-        element="fieldset"
         buttonClassName="euiAccordionForm__button"
         buttonContent={buttonContent}
         paddingSize="l"

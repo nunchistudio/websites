@@ -9,7 +9,7 @@ const Layout = ({ path, markdoc, children }) => {
     {
       name: 'Onboarding',
       key: 'onboarding',
-      icon: <EuiIcon type="launch" color="success" />,
+      icon: <EuiIcon type="bullseye" color="success" />,
       items: [
         {
           name: 'Overview',

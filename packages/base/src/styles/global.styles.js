@@ -12,4 +12,12 @@ export const globalStyles = css`
   article ul {
     margin-bottom: 34px;
   }
+
+  article img {
+    max-width: 100%;
+  }
+
+  div[role="tabpanel"] {
+    padding-top: 20px;
+  }
 `;

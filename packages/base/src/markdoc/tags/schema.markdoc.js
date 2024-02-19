@@ -29,7 +29,6 @@ const Schema = (props) => {
   useEffect(() => {
     async function getToken() {
       const response = await fetch(props.file);
-      console.log(response.url)
       const body = await response.text();
 
       setToken(body)

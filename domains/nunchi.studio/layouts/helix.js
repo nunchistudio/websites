@@ -9,7 +9,7 @@ const Layout = ({ path, markdoc, children }) => {
     {
       name: 'Onboarding',
       key: 'onboarding',
-      icon: <EuiIcon type="launch" color="success" />,
+      icon: <EuiIcon type="bullseye" color="success" />,
       items: [
         {
           name: 'What is helix?',
@@ -50,12 +50,6 @@ const Layout = ({ path, markdoc, children }) => {
       icon: <EuiIcon type="apmTrace" color="primary" />,
       key: '/helix/integration',
       href: '/helix/integration',
-    },
-    {
-      name: 'API references',
-      icon: <EuiIcon type="tableOfContents" color="primary" />,
-      key: '/helix/api-references',
-      href: '/helix/api-references',
     },
     {
       name: 'Resources',

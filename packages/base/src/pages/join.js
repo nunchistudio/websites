@@ -36,7 +36,7 @@ const Join = (props) => {
             paddingSize="xl"
             footer={
               <EuiButton size="s" color="primary" href={`https://github.com/nunchistudio/${props.repository}`}>
-                Give us a star
+                Give a star
               </EuiButton>
             }
           />

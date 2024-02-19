@@ -110,12 +110,12 @@ function Home(props) {
             <EuiSpacer size="s" />
             <EuiFlexGroup>
               <EuiFlexItem grow={false}>
-                <EuiButton color="transparent" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/nunchistudio/platform-starter">
+                <EuiButton color="text" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/nunchistudio/platform-starter">
                   platform-starter
                 </EuiButton>
               </EuiFlexItem>
               <EuiFlexItem grow={false}>
-                <EuiButton color="transparent" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/nunchistudio/docker-opentelemetry">
+                <EuiButton color="text" iconType={`/icons/github-${colorMode}.svg`} href="https://github.com/nunchistudio/docker-opentelemetry">
                   docker-opentelemetry
                 </EuiButton>
               </EuiFlexItem>
